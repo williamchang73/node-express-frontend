@@ -1,0 +1,17 @@
+{
+  "name": "aboutus",
+  "version": "0.0.2-3",
+  "private": true,
+  "scripts": {
+    "start": "app.js"
+  },
+  "dependencies": {
+    "express": "3.1.0",
+    "ejs": "*",
+    "less-middleware": "*"
+  },
+  "subdomain": "williamchang.aboutus",
+  "engines": {
+    "node": "0.8.x"
+  }
+}
