@@ -1,0 +1,167 @@
+var data : {
+	"company_name" : "APPz 艾普斯數位",
+	"compamy_pic" : {
+		"0" : {
+			"url" : "http://img651.imageshack.us/img651/7749/99315963.jpg",
+			"type" :	"special"
+		},
+		"1" : {
+			"url" : "http://img838.imageshack.us/img838/4131/22069515.jpg",
+			"type" :	"playground"
+		},
+		"2" : {
+			"url" : "http://img716.imageshack.us/img716/4332/87260050.jpg",
+			"type" :  "comfortable"
+		},
+		"3" : {
+			"url" : "http://img820.imageshack.us/img820/4658/69541482.jpg",
+			"type" :	"workingspace"
+		},
+		"4" : {
+			"url" : "http://img69.imageshack.us/img69/8141/img1093ld.jpg",
+			"type" :	"workingspace"
+		},
+		"5" : {
+			"url" : "http://img59.imageshack.us/img59/7826/img1094lt.jpg",
+			"type" :	"workingspace"
+		},
+		"6" : {
+			"url" : "http://img801.imageshack.us/img801/9423/img1101xv.jpg",
+			"type" :	"workingspace"
+		},
+		"7" : {
+			"url" : "http://img89.imageshack.us/img89/9528/img110251044wc.jpg",
+			"type" :	"workingspace"
+		},
+		"8" : {
+			"url" : "http://img248.imageshack.us/img248/6845/img1090w.jpg",
+			"type" :	"workingspace"
+		},
+		"9" : {
+			"url" : "http://img819.imageshack.us/img819/4323/img1097ld.jpg",
+			"type" :	"workingspace"
+		}
+	},
+	"events" :{
+		"0" : { 
+			"title" : "白色派對＠高雄",
+			"desc" : "玩和工作一樣重要，這是在 APPz 我們奉行的最高宗旨，只要有大型的派對或好玩的活動，我們絕對不會錯過。",
+			"pic" : "http://img836.imageshack.us/img836/3753/img0035cb.jpg"
+		},
+		"1" : { 
+			"title" : "長灘島旅遊", 
+			"desc" : "如果你也熱愛旅行，那 APPz 非常歡迎你加入我們的大家庭。從印度果阿到東南亞熱帶島嶼，每年二次的員工旅遊總是可以帶給我們更多的啓發。", 
+			"pic" : "http://img833.imageshack.us/img833/2526/img3236l.jpg"
+		},
+		"2" : { 
+			"title" : "漆彈大戰",
+			"desc" : "工作壓力大的時候，就是我們上漆彈戰場的時候。同仁參加全程免費，還可攜帶親朋好友一同參加。, 
+			"pic" : "http://img521.imageshack.us/img521/7317/funaj.jpg"
+		}
+	
+	},
+	"people" : {
+		"0" : {
+			"name" : "Mike Chang", 
+			"headpic"  : "http://img855.imageshack.us/img855/5190/20866122260374467645204.jpg", 
+			"title" : "Founder & CEO", 
+			"quote" : "You have to think anyway, so why not think big? ", 
+			"email" : "mike@appz.com.tw", 
+			"facebook" : "https://www.facebook.com/mikechang0528" 
+		},
+		"1" : {
+			"name" : "Carina Fang", 
+			"headpic"  : "http://img21.imageshack.us/img21/9701/60931174252843003148285.jpg", 
+			"title" : "行銷經理", 
+			"quote" : "成功的唯一密訣，是堅持到最後一分鐘。", 
+			"email" : "carina@appz.com.tw", 
+			"facebook" : "https://www.facebook.com/carinafang49" 
+		},
+		"2" : {
+			"name" : "Funny Liu", 
+			"headpic"  : "http://img221.imageshack.us/img221/3938/15013553548813646874349.jpg", 
+			"title" : "藝術總監", 
+			"quote" : "好設計必須要誠實", 
+			"email" : "funny@appz.com.tw", 
+			"facebook" : "https://www.facebook.com/joe90074" 
+		},
+		"3" : {
+			"name" : "Chao Fang", 
+			"headpic"  : "http://img203.imageshack.us/img203/7121/2013020754617.png", 
+			"title" : "媒體總監", 
+			"quote" : "魔鬼就藏在細節裡", 
+			"email" : "siri@appz.com.tw", 
+			"facebook" : "https://www.facebook.com/chao.feng.7" 
+		}
+	},
+	"core_value" : {
+		"0" : {
+			"core" : "團隊合作", 
+			"title" : "與自己競爭，與別人合作。", 
+			"desc" : "大家庭式的團隊組織，讓我們既分工又能合作。我們對醫療院所所提供的每ㄧ項服務及每一項問題的解決都來自於團隊合作的力量。因此不論你在哪裡，『APPz』團隊就在那裡。"
+		},
+		"1" : {
+			"core" : "承諾", 
+			"title" : "有企圖心與敢於實現對自我承諾。", 
+			"desc" : "APPz 堅守對客戶、供應商、員工及社會的承諾。所有這些權益關係人對 APPz 的成功都相當重要，APPz 會盡力照顧所有權益關係人的權益。同樣地，我們也希望所有權益關係人能對 APPz 信守其承諾。"
+		},
+		"2" : {
+			"core" : "創新", 
+			"title" : "能正確地提出問題就是邁出了創新的第一步。", 
+			"desc" : "「創新」是企業在劇烈競爭環境中，持續成長、永續經營之成功關鍵。同仁要不斷引進並活用新觀念、新技術，以創造新商業營運模式、提供新服務，才可為顧客持續創造價值，公司才能持續成長、永續經營。"
+		}
+	},
+	"job" : {
+		"0" : {
+			"title" : "行銷經理",
+			"pay" : "底薪 $50,000+績效獎金",
+			"details" : {
+				"0" : "規劃＆執行年度行銷計劃", 
+				"1" : "執行社群經營計劃",
+				"2" : "行銷團隊人數：5人"
+			}
+		},
+		"1" : {
+			"title" : "使用者介面設計師",
+			"pay" : "底薪 $45,000+績效獎金",
+			"details" : {
+				"0" : "優化使用者經驗＆執行", 
+				"1" : "網站介面規劃＆設計",
+				"2" : "iPhone App 介面規劃＆設計"
+			}
+		},
+		"2" : {
+			"title" : "資深軟體工程師",
+			"pay" : "底薪 $50,000+績效獎金",
+			"details" : {
+				"0" : "電路設計＆單晶片軟體", 
+				"1" : "PLC可程式控制器",
+				"2" : "技術維修＆自動化規劃"
+			}
+		}
+	},
+	"joy_apply_url" : "https://www.facebook.com/Go.APPz",
+	"latest_news" : {
+		"0" : {
+			"date" : "2/5/2013",
+			"pic" : "http://img145.imageshack.us/img145/4470/20130207105418.png",
+			"title" : "蘿琳雅官方 iPhone App 啓動派對",
+			"url" : "http://www.appz.com.tw/news.php"
+		},
+		"1" : {
+			"date" : "1/15/2013",
+			"pic" : "http://img692.imageshack.us/img692/7069/unknowndr.jpg",
+			"title" : "海壽司官方 iPhone App 啓動派對",
+			"url" : "http://www.appz.com.tw/news.php?PID=46"
+		}
+	},
+	"contact_info" :{
+		"message" : "職務應徵",
+		"pic" : "http://img21.imageshack.us/img21/9701/60931174252843003148285.jpg",
+		"title" : "人資部經理",
+		"email" : "info@appz.com.tw",
+		"address" : "新北市板橋區中山路二段62號9F-7",
+		"phone" : "02-2952-8655",
+		"facebook" : "https://www.facebook.com/appz.com.tw"
+	}
+}
