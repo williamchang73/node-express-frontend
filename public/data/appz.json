@@ -1,4 +1,4 @@
-var data : {
+var data = {
 	"company_info" : {
 		"name" : "APPz 艾普斯數位",
 		"slogan" : "專業 iPhone App，iPad App，Android App 開發設計團隊。APPz 協助品牌開發互動性強大的App，以 App 經營顧客，並執行 App 行銷方案。",

@@ -7,14 +7,21 @@ var express = require('express')
   , company = require('./routes/company')
   , http = require('http')
   , fs = require('fs')
-  , path = require('path');
+  , path = require('path')
+  , Log = require('log')
+  , log = new Log('info', fs.createWriteStream('./log/abous.log')
+  ,	engine = require('ejs-locals')
+  );
 
+  
 var app = express();
-
+log.info('app start');
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
-  app.engine('htm', require('ejs').renderFile);
+  app.set('testing', 'testing');
+  //app.engine('htm', require('ejs').renderFile);
+  app.engine('htm', engine);
   app.set('view engine', 'htm');
   app.use(express.favicon());
   app.use(express.logger('dev'));
@@ -34,6 +41,9 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/company', company.index);
+app.get('/company/:id', company.index);
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

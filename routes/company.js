@@ -1,9 +1,11 @@
-var base = require('./base');
-
 
 exports.index = function(req, res){
-	base.init(req, res);
-	var data = { title: 'Express' };
-	base.render('company', data);
+	var data = { 
+		page  : 'company',
+		title : 'Express',
+		data  : req.params.id + '.json',
+		company : 'lalala'
+	};
+	res.render('pages/company', data);
 };
 
