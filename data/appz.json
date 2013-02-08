@@ -6,44 +6,64 @@ var data : {
 	},
 	"compamy_pic" : {
 		"0" : {
-			"url" : "http://img651.imageshack.us/img651/7749/99315963.jpg",
-			"type" :	"special"
+			"pic" : "http://img651.imageshack.us/img651/7749/99315963.jpg",
+			"type" :	"special",
+			"title" : "",
+			"desc" : ""
 		},
 		"1" : {
-			"url" : "http://img838.imageshack.us/img838/4131/22069515.jpg",
-			"type" :	"playground"
+			"pic" : "http://img838.imageshack.us/img838/4131/22069515.jpg",
+			"type" :	"playground",
+			"title" : "",
+			"desc" : ""
 		},
 		"2" : {
-			"url" : "http://img716.imageshack.us/img716/4332/87260050.jpg",
-			"type" :  "comfortable"
+			"pic" : "http://img716.imageshack.us/img716/4332/87260050.jpg",
+			"type" :  "comfortable",
+			"title" : "",
+			"desc" : ""
 		},
 		"3" : {
-			"url" : "http://img820.imageshack.us/img820/4658/69541482.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img820.imageshack.us/img820/4658/69541482.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		},
 		"4" : {
-			"url" : "http://img69.imageshack.us/img69/8141/img1093ld.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img69.imageshack.us/img69/8141/img1093ld.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		},
 		"5" : {
-			"url" : "http://img59.imageshack.us/img59/7826/img1094lt.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img59.imageshack.us/img59/7826/img1094lt.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		},
 		"6" : {
-			"url" : "http://img801.imageshack.us/img801/9423/img1101xv.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img801.imageshack.us/img801/9423/img1101xv.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		},
 		"7" : {
-			"url" : "http://img89.imageshack.us/img89/9528/img110251044wc.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img89.imageshack.us/img89/9528/img110251044wc.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		},
 		"8" : {
-			"url" : "http://img248.imageshack.us/img248/6845/img1090w.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img248.imageshack.us/img248/6845/img1090w.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		},
 		"9" : {
-			"url" : "http://img819.imageshack.us/img819/4323/img1097ld.jpg",
-			"type" :	"workingspace"
+			"pic" : "http://img819.imageshack.us/img819/4323/img1097ld.jpg",
+			"type" :	"workingspace",
+			"title" : "",
+			"desc" : ""
 		}
 	},
 	"events" :{
