@@ -39,7 +39,7 @@ app.configure('development', function(){
 });
 
 
-app.get('/', routes.index);
+app.get('/', company.index); //to do need a index file
 app.get('/company', company.index);
 app.get('/company/:id', company.index);
 
