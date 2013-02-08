@@ -1,5 +1,9 @@
 var data : {
-	"company_name" : "APPz 艾普斯數位",
+	"company_info" : {
+		"name" : "APPz 艾普斯數位",
+		"slogan" : "專業 iPhone App，iPad App，Android App 開發設計團隊。APPz 協助品牌開發互動性強大的App，以 App 經營顧客，並執行 App 行銷方案。",
+		"logopic" : ""
+	},
 	"compamy_pic" : {
 		"0" : {
 			"url" : "http://img651.imageshack.us/img651/7749/99315963.jpg",

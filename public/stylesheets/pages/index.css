@@ -290,6 +290,9 @@
 #features .feature.ss h3 {
     margin-top: 45px;
 }
+#features .span6 img {
+	border-radius: 10px;
+}
 #features .feature .info h3 img {
     margin-right: 18px;
     position: relative;
