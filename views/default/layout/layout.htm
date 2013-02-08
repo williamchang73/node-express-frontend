@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Look inside the company</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<% include /../components/header.htm %>
+	<%-stylesheets%>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="pull_top">
+    <div class="navbar transparent navbar-inverse navbar-fixed-top">
+    <!-- starts navibar -->
+    <% include /../components/navibar.htm %>
+    <!-- end navibar -->  
+    </div>
+    <!-- starts content -->
+    <%- body %>
+    <!-- end content -->
+    <% include /../components/footer.htm %>
+	<%-scripts%>
+</body>
+</html>
