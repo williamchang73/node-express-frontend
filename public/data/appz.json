@@ -5,64 +5,54 @@
 			"slogan" : "專業 iPhone App，iPad App，Android App 開發設計團隊。APPz 協助品牌開發互動性強大的App，以 App 經營顧客，並執行 App 行銷方案。",
 			"logopic" : ""
 		},
-		"compamy_pic" : {
+		"company_pic" : {
 			"0" : {
 				"pic" : "http://img651.imageshack.us/img651/7749/99315963.jpg",
-				"type" :	"special",
-				"title" : "Employee's Desk 1",
+				"title" : "Most Special",
 				"desc" : "desc 1"
 			},
 			"1" : {
 				"pic" : "http://img838.imageshack.us/img838/4131/22069515.jpg",
-				"type" :	"playground",
-				"title" : "Employee's Desk 2",
+				"title" : "Playing Ground",
 				"desc" : "desc 2"
 			},
 			"2" : {
 				"pic" : "http://img716.imageshack.us/img716/4332/87260050.jpg",
-				"type" :  "comfortable",
-				"title" : "Employee's Desk 3",
+				"title" : "Most Comfortable",
 				"desc" : "desc 3"
 			},
 			"3" : {
 				"pic" : "http://img820.imageshack.us/img820/4658/69541482.jpg",
-				"type" :	"workingspace",
-				"title" : "Employee's Desk 4",
+				"title" : "Working Space",
 				"desc" : "desc 4"
 			},
 			"4" : {
 				"pic" : "http://img69.imageshack.us/img69/8141/img1093ld.jpg",
-				"type" :	"workingspace",
 				"title" : "Employee's Desk 5",
 				"desc" : "desc 5"
 			},
 			"5" : {
 				"pic" : "http://img59.imageshack.us/img59/7826/img1094lt.jpg",
-				"type" :	"workingspace",
 				"title" : "Employee's Desk 6",
 				"desc" : "desc 6"
 			},
 			"6" : {
 				"pic" : "http://img801.imageshack.us/img801/9423/img1101xv.jpg",
-				"type" :	"workingspace",
 				"title" : "Employee's Desk 7",
 				"desc" : "desc 7"
 			},
 			"7" : {
 				"pic" : "http://img89.imageshack.us/img89/9528/img110251044wc.jpg",
-				"type" :	"workingspace",
 				"title" : "Employee's Desk 8",
 				"desc" : "desc 8"
 			},
 			"8" : {
 				"pic" : "http://img248.imageshack.us/img248/6845/img1090w.jpg",
-				"type" :	"workingspace",
 				"title" : "Employee's Desk 9",
 				"desc" : "desc 9"
 			},
 			"9" : {
 				"pic" : "http://img819.imageshack.us/img819/4323/img1097ld.jpg",
-				"type" :	"workingspace",
 				"title" : "Employee's Desk 10",
 				"desc" : "desc 10"
 			}
