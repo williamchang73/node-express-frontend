@@ -78,7 +78,7 @@
 		"people" : {
 			"0" : {
 				"name" : "Mike Chang", 
-				"headpic"  : "http://img855.imageshack.us/img855/5190/20866122260374467645204.jpg", 
+				"headpic"  : "/images/appz/20866122260374467645204.jpg", 
 				"title" : "Founder & CEO", 
 				"quote" : "You have to think anyway, so why not think big? ", 
 				"email" : "mike@appz.com.tw", 
@@ -86,7 +86,7 @@
 			},
 			"1" : {
 				"name" : "Carina Fang", 
-				"headpic"  : "http://img21.imageshack.us/img21/9701/60931174252843003148285.jpg", 
+				"headpic"  : "/images/appz/60931174252843003148285.jpg", 
 				"title" : "行銷經理", 
 				"quote" : "成功的唯一密訣，是堅持到最後一分鐘。", 
 				"email" : "carina@appz.com.tw", 
@@ -94,7 +94,7 @@
 			},
 			"2" : {
 				"name" : "Funny Liu", 
-				"headpic"  : "http://img221.imageshack.us/img221/3938/15013553548813646874349.jpg", 
+				"headpic"  : "/images/appz/15013553548813646874349.jpg", 
 				"title" : "藝術總監", 
 				"quote" : "好設計必須要誠實", 
 				"email" : "funny@appz.com.tw", 
@@ -102,7 +102,7 @@
 			},
 			"3" : {
 				"name" : "Chao Fang", 
-				"headpic"  : "http://img203.imageshack.us/img203/7121/2013020754617.png", 
+				"headpic"  : "/images/appz/2013020754617.png", 
 				"title" : "媒體總監", 
 				"quote" : "魔鬼就藏在細節裡", 
 				"email" : "siri@appz.com.tw", 

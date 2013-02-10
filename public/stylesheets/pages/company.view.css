@@ -57,6 +57,7 @@
 }
 #team .people .bio_box{
 	margin: 0;
+	margin-bottom: 30px;
 }
 #team .people .bio_boxr{
 	float: right;
@@ -69,7 +70,7 @@
 }
 #team .people .bio_box .info{
 	float: left;
-	margin: 38px 0 0 30px;
+	margin: 10px 0 0 30px;
 }
 #team .people .bio_box .info p{
 	margin-bottom: 0;
@@ -84,6 +85,9 @@
 	color: #98989A;
 	font-style: italic;
 	font-style: 16px;
+	width: 230px;
+	margin-left: auto;
+    margin-right: auto;
 	margin-bottom: 18px;
 }
 #team .people .bio_box .info a {

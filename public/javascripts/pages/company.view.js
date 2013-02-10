@@ -20,7 +20,8 @@ companyController.getCompanyData = function() {
         success : function(data) {
         	// success do nothing;
 			companyController.setCompanyInfo(data.company_info);		
-			companyController.setWorkingSpaces(data.company_pic);	 
+			companyController.setWorkingSpaces(data.company_pic);
+			companyController.setPeople(data.people);	 
         },                 
         error : function(data) {
             console.error(data.error_message);
@@ -64,6 +65,26 @@ companyController.setWorkingSpaces = function(data) {
 }
 
 
+//set up people
+companyController.setPeople = function(data) {
+	var $peopleCell = $('#people_cell').remove().clone();
+	$.each( data, function(i, person) {
+		if(i<2 || true){
+			var $eachPerson = $peopleCell.clone();
+			$eachPerson.find("img").attr("src", person.headpic)
+			.end()
+			.find(".name").text(person.name)
+			.end()
+			.find("#people_title").text(person.title)
+			.end()
+			.find("#people_quote").text(person.quote)
+			.end()
+			.find(".facebook").attr("href", person.facebook)
+			.end();
+			$('#people_block .row').append( $eachPerson );
+		}
+    });
+}
 
 
 $(function() {
