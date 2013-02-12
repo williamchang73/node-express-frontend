@@ -21,7 +21,8 @@ companyController.getCompanyData = function() {
         	// success do nothing;
 			companyController.setCompanyInfo(data.company_info);		
 			companyController.setWorkingSpaces(data.company_pic);
-			companyController.setPeople(data.people);	 
+			companyController.setPeople(data.people);
+			companyController.setCoreValue(data.core_value);
         },                 
         error : function(data) {
             console.error(data.error_message);
@@ -85,6 +86,50 @@ companyController.setPeople = function(data) {
 		}
     });
 }
+
+
+//set up core value
+companyController.setCoreValue = function(data) {
+	var $coreCell = $('#core').children().remove().clone(); 
+	var $coreTitleCell = $('#core_title').children().remove().clone(); 
+
+	$.each( data, function(i, core) {
+		var $eachCore = $coreCell.clone();
+		var $eachCoreTitle = $coreTitleCell.clone();
+		if(i == 0 ){ //should active
+			$eachCore.addClass("active");
+			$eachCoreTitle.addClass("active");
+		}
+		
+		$eachCore.find("h4").text(core.title)
+		.end()
+		.find("p").text(core.desc)
+		.end();
+		$('#core').append( $eachCore );
+		$eachCoreTitle.find("span").text(core.core)
+		.end();
+		$('#core_title').append( $eachCoreTitle );
+    });
+    companyController.clickServicesCircle();
+}
+
+
+//var servicesCircle = {
+companyController.clickServicesCircle = function() {
+    var $container = $(".services_circles");
+    var $texts = $container.find(".description .text");
+    var $circles = $container.find(".areas .circle");
+
+    $circles.click(function () {
+    	console.log('click');    	
+        var index = $circles.index(this);
+        $texts.fadeOut();
+        $texts.eq(index).fadeIn();
+        $circles.removeClass("active");
+        $(this).addClass("active");
+	});
+}
+
 
 
 $(function() {

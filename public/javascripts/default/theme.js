@@ -13,8 +13,6 @@ $(function () {
         $('.flexslider').flexslider();
     }
 
-    servicesCircle.initialize();
-
     staticHeader.initialize();
 
     portfolioItem.initialize();
@@ -44,20 +42,3 @@ var staticHeader = {
         }
     }
 }
-
-var servicesCircle = {
-    initialize: function () {
-        var $container = $(".services_circles");
-        var $texts = $container.find(".description .text");
-        var $circles = $container.find(".areas .circle");
-
-        $circles.click(function () {
-            var index = $circles.index(this);
-            $texts.fadeOut();
-            $texts.eq(index).fadeIn();
-            $circles.removeClass("active");
-            $(this).addClass("active");
-        });
-    }
-}
-
