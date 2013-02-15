@@ -21,6 +21,7 @@ companyController.getCompanyData = function() {
         	// success do nothing;
 			companyController.setCompanyInfo(data.company_info);		
 			companyController.setWorkingSpaces(data.company_pic);
+			companyController.setEvent(data.events);
 			companyController.setPeople(data.people);
 			companyController.setCoreValue(data.core_value);
 			companyController.setJobs(data.job, data.joy_apply_url);
@@ -65,6 +66,30 @@ companyController.setWorkingSpaces = function(data) {
     $workspace = null;
     //because this is slider need to preload first
     coverslide();
+}
+
+
+//set up event
+companyController.setEvent = function(data) {
+	var $eventCell = $('#event').remove().clone();
+	$.each( data, function(i, event) {
+		var $eachEvent = $eventCell.clone();
+		$eachEvent.find("img").attr("src", event.pic)
+		.end()
+		.find("h3").text(event.title)
+		.end()
+		.find("p").text(event.desc)
+		.end();
+		
+		if(i == 1 ){ //second needs to change order
+			var $img = $eachEvent.find('#event_img').remove().clone();
+			var $info = $eachEvent.find('#event_info').remove().clone();
+			$eachEvent.append($info);
+			$eachEvent.append($img);
+		}
+		$('#features .container').append( $eachEvent );
+    });
+    $eventCell = null;
 }
 
 
