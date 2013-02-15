@@ -23,6 +23,7 @@ companyController.getCompanyData = function() {
 			companyController.setWorkingSpaces(data.company_pic);
 			companyController.setPeople(data.people);
 			companyController.setCoreValue(data.core_value);
+			companyController.setJobs(data.job, data.joy_apply_url);
         },                 
         error : function(data) {
             console.error(data.error_message);
@@ -61,6 +62,7 @@ companyController.setWorkingSpaces = function(data) {
 	        .end();
 		}
     });
+    $workspace = null;
     //because this is slider need to preload first
     coverslide();
 }
@@ -70,21 +72,20 @@ companyController.setWorkingSpaces = function(data) {
 companyController.setPeople = function(data) {
 	var $peopleCell = $('#people_cell').remove().clone();
 	$.each( data, function(i, person) {
-		if(i<2 || true){
-			var $eachPerson = $peopleCell.clone();
-			$eachPerson.find("img").attr("src", person.headpic)
-			.end()
-			.find(".name").text(person.name)
-			.end()
-			.find("#people_title").text(person.title)
-			.end()
-			.find("#people_quote").text(person.quote)
-			.end()
-			.find(".facebook").attr("href", person.facebook)
-			.end();
-			$('#people_block .row').append( $eachPerson );
-		}
+		var $eachPerson = $peopleCell.clone();
+		$eachPerson.find("img").attr("src", person.headpic)
+		.end()
+		.find(".name").text(person.name)
+		.end()
+		.find("#people_title").text(person.title)
+		.end()
+		.find("#people_quote").text(person.quote)
+		.end()
+		.find(".facebook").attr("href", person.facebook)
+		.end();
+		$('#people_block .row').append( $eachPerson );
     });
+    $peopleCell = null;
 }
 
 
@@ -110,11 +111,12 @@ companyController.setCoreValue = function(data) {
 		.end();
 		$('#core_title').append( $eachCoreTitle );
     });
+    $coreCell = null;
+    $coreTitleCell = null;
     companyController.clickServicesCircle();
 }
 
 
-//var servicesCircle = {
 companyController.clickServicesCircle = function() {
     var $container = $(".services_circles");
     var $texts = $container.find(".description .text");
@@ -129,6 +131,36 @@ companyController.clickServicesCircle = function() {
         $(this).addClass("active");
 	});
 }
+
+
+
+
+//set up people
+companyController.setJobs = function(data, applyURL) {
+	var $jobCell = $('#job').children().remove().clone();
+	$.each( data, function(i, job) {
+		var $eachJob = $jobCell.clone();
+		$eachJob.find("h3").text(job.title)
+		.end()
+		.find(".qty").text(job.pay)
+		.end();
+		var $jobDesc = $eachJob.find(".features").children().remove().clone();
+		$.each( job.details, function(j, desc) {
+			var $eachJobDesc = $jobDesc.clone();
+			$eachJobDesc.text(desc)
+			.end();
+			$eachJob.find(".features").append( $eachJobDesc );
+		});
+		$('#job').append( $eachJob );
+    });
+	$('#job').find('.order').attr("href", applyURL);
+	$('#job').parent().find('.start a').attr("href", applyURL);
+    //release memory
+	$jobCell = null;
+	
+}
+
+
 
 
 

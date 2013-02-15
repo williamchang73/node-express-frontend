@@ -14,7 +14,6 @@ $(function () {
     }
 
     staticHeader.initialize();
-
     portfolioItem.initialize();
 });
 
