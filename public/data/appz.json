@@ -159,21 +159,21 @@
 		"latest_news" : {
 			"0" : {
 				"date" : "2/5/2013",
-				"pic" : "http://img145.imageshack.us/img145/4470/20130207105418.png",
+				"pic" : "/images/appz/news1.jpg",
 				"title" : "蘿琳雅官方 iPhone App 啓動派對",
 				"url" : "http://www.appz.com.tw/news.php"
 			},
 			"1" : {
 				"date" : "1/15/2013",
-				"pic" : "http://img692.imageshack.us/img692/7069/unknowndr.jpg",
+				"pic" : "/images/appz/news2.jpg",
 				"title" : "海壽司官方 iPhone App 啓動派對",
 				"url" : "http://www.appz.com.tw/news.php?PID=46"
 			}
 		},
 		"contact_info" :{
-			"message" : "職務應徵",
-			"pic" : "http://img21.imageshack.us/img21/9701/60931174252843003148285.jpg",
+			"name" : "Carina Fang",
 			"title" : "人資部經理",
+			"pic" : "/images/appz/contact_pic.jpg",
 			"email" : "info@appz.com.tw",
 			"address" : "新北市板橋區中山路二段62號9F-7",
 			"phone" : "02-2952-8655",

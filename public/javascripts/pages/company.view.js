@@ -25,6 +25,8 @@ companyController.getCompanyData = function() {
 			companyController.setPeople(data.people);
 			companyController.setCoreValue(data.core_value);
 			companyController.setJobs(data.job, data.joy_apply_url);
+			companyController.setNews(data.latest_news);
+			companyController.setContact(data.contact_info);
         },                 
         error : function(data) {
             console.error(data.error_message);
@@ -160,7 +162,7 @@ companyController.clickServicesCircle = function() {
 
 
 
-//set up people
+//set up job
 companyController.setJobs = function(data, applyURL) {
 	var $jobCell = $('#job').children().remove().clone();
 	$.each( data, function(i, job) {
@@ -182,7 +184,39 @@ companyController.setJobs = function(data, applyURL) {
 	$('#job').parent().find('.start a').attr("href", applyURL);
     //release memory
 	$jobCell = null;
-	
+}
+
+
+//set up latest news
+companyController.setNews = function(data) {
+	var $newsCell = $('#news').find(".post").remove().clone();
+	$.each( data, function(i, news) {
+		var $eachNews = $newsCell.clone();
+		$eachNews.find("a").attr('href', news.url)
+		.end()
+		.find(".date").text(news.date)
+		.end()
+		.find("img").attr('src', news.pic)
+		.end()
+		.find(".title").text(news.title)
+		.end();
+
+		$('#news').append( $eachNews );
+    });
+	$newsCell = null;
+}
+
+
+//set up contact
+companyController.setContact = function(data) {
+	$footer = $('#footer'); 
+	$footer.find('#contact_location').text(data.address);
+	$footer.find('#contact_phone').text(data.phone);
+	$footer.find('#contact_email').attr('value', data.email);
+	$footer.find('#contact_facebook').attr('href', data.facebook);
+	$footer.find('.author').find('.info').text(data.title);
+	$footer.find('.author').find('.name').text(data.name);
+	$footer.find('.author').find('img').attr('src', data.pic);
 }
 
 
