@@ -7,52 +7,52 @@
 		},
 		"company_pic" : {
 			"0" : {
-				"pic" : "http://img651.imageshack.us/img651/7749/99315963.jpg",
+				"pic" : "https://www.filepicker.io/api/file/ScIM9j9MThOWWpUQikg5",
 				"title" : "Most Special",
 				"desc" : "desc 1"
 			},
 			"1" : {
-				"pic" : "http://img838.imageshack.us/img838/4131/22069515.jpg",
+				"pic" : "https://www.filepicker.io/api/file/nSusN5c7TcOdOT9FDGha",
 				"title" : "Playing Ground",
 				"desc" : "desc 2"
 			},
 			"2" : {
-				"pic" : "http://img716.imageshack.us/img716/4332/87260050.jpg",
+				"pic" : "https://www.filepicker.io/api/file/bZicw7quTPG6CNAn7gag",
 				"title" : "Most Comfortable",
 				"desc" : "desc 3"
 			},
 			"3" : {
-				"pic" : "http://img820.imageshack.us/img820/4658/69541482.jpg",
+				"pic" : "https://www.filepicker.io/api/file/lRa1G7ECSsOdtHN3JZC8",
 				"title" : "Working Space",
 				"desc" : "desc 4"
 			},
 			"4" : {
-				"pic" : "http://img69.imageshack.us/img69/8141/img1093ld.jpg",
+				"pic" : "https://www.filepicker.io/api/file/V1BPmaM2TACkmoyf1dXw",
 				"title" : "Employee's Desk 5",
 				"desc" : "desc 5"
 			},
 			"5" : {
-				"pic" : "http://img59.imageshack.us/img59/7826/img1094lt.jpg",
+				"pic" : "https://www.filepicker.io/api/file/iWoY4AeYSKmJShcr11Vq",
 				"title" : "Employee's Desk 6",
 				"desc" : "desc 6"
 			},
 			"6" : {
-				"pic" : "http://img801.imageshack.us/img801/9423/img1101xv.jpg",
+				"pic" : "https://www.filepicker.io/api/file/iAlJwalCS1i3KDHwiVST",
 				"title" : "Employee's Desk 7",
 				"desc" : "desc 7"
 			},
 			"7" : {
-				"pic" : "http://img89.imageshack.us/img89/9528/img110251044wc.jpg",
+				"pic" : "https://www.filepicker.io/api/file/EFIA1etSDOZcSKjv9JWv",
 				"title" : "Employee's Desk 8",
 				"desc" : "desc 8"
 			},
 			"8" : {
-				"pic" : "http://img248.imageshack.us/img248/6845/img1090w.jpg",
+				"pic" : "https://www.filepicker.io/api/file/CedU440yR9iovjxuyREC",
 				"title" : "Employee's Desk 9",
 				"desc" : "desc 9"
 			},
 			"9" : {
-				"pic" : "http://img819.imageshack.us/img819/4323/img1097ld.jpg",
+				"pic" : "https://www.filepicker.io/api/file/8Xg8b15RYuoqYWziEEPO",
 				"title" : "Employee's Desk 10",
 				"desc" : "desc 10"
 			}
@@ -61,24 +61,24 @@
 			"0" : { 
 				"title" : "白色派對＠高雄",
 				"desc" : "玩和工作一樣重要，這是在 APPz 我們奉行的最高宗旨，只要有大型的派對或好玩的活動，我們絕對不會錯過。",
-				"pic" : "http://img836.imageshack.us/img836/3753/img0035cb.jpg"
+				"pic" : "https://www.filepicker.io/api/file/JzqGxUMUQGS59NZ8bdFh"
 			},
 			"1" : { 
 				"title" : "長灘島旅遊", 
 				"desc" : "如果你也熱愛旅行，那 APPz 非常歡迎你加入我們的大家庭。從印度果阿到東南亞熱帶島嶼，每年二次的員工旅遊總是可以帶給我們更多的啓發。", 
-				"pic" : "http://img833.imageshack.us/img833/2526/img3236l.jpg"
+				"pic" : "https://www.filepicker.io/api/file/kaFhGvuWTE68vJX1ap4k"
 			},
 			"2" : { 
 				"title" : "漆彈大戰",
 				"desc" : "工作壓力大的時候，就是我們上漆彈戰場的時候。同仁參加全程免費，還可攜帶親朋好友一同參加。", 
-				"pic" : "http://img521.imageshack.us/img521/7317/funaj.jpg"
+				"pic" : "https://www.filepicker.io/api/file/MdlsR2fcR2CmkuK4jEmf"
 			}
 		
 		},
 		"people" : {
 			"0" : {
 				"name" : "Mike Chang", 
-				"headpic"  : "/images/appz/20866122260374467645204.jpg", 
+				"headpic"  : "https://www.filepicker.io/api/file/NB7lHvYTQV6D4SCXpr3u", 
 				"title" : "Founder & CEO", 
 				"quote" : "You have to think anyway, so why not think big? ", 
 				"email" : "mike@appz.com.tw", 
@@ -86,7 +86,7 @@
 			},
 			"1" : {
 				"name" : "Carina Fang", 
-				"headpic"  : "/images/appz/60931174252843003148285.jpg", 
+				"headpic"  : "https://www.filepicker.io/api/file/7bCfbDYMSwWSfIbUVRv2", 
 				"title" : "行銷經理", 
 				"quote" : "成功的唯一密訣，是堅持到最後一分鐘。", 
 				"email" : "carina@appz.com.tw", 
@@ -94,7 +94,7 @@
 			},
 			"2" : {
 				"name" : "Funny Liu", 
-				"headpic"  : "/images/appz/15013553548813646874349.jpg", 
+				"headpic"  : "https://www.filepicker.io/api/file/dK4PktL0SXmG0xWgnrfu", 
 				"title" : "藝術總監", 
 				"quote" : "好設計必須要誠實", 
 				"email" : "funny@appz.com.tw", 
@@ -102,7 +102,7 @@
 			},
 			"3" : {
 				"name" : "Chao Fang", 
-				"headpic"  : "/images/appz/2013020754617.png", 
+				"headpic"  : "https://www.filepicker.io/api/file/VMCSdEEgR8mrgNiPqcN6", 
 				"title" : "媒體總監", 
 				"quote" : "魔鬼就藏在細節裡", 
 				"email" : "siri@appz.com.tw", 
@@ -159,13 +159,13 @@
 		"latest_news" : {
 			"0" : {
 				"date" : "2/5/2013",
-				"pic" : "/images/appz/news1.jpg",
+				"pic" : "https://www.filepicker.io/api/file/RKereb27Q5OFhu3vfq1I",
 				"title" : "蘿琳雅官方 iPhone App 啓動派對",
 				"url" : "http://www.appz.com.tw/news.php"
 			},
 			"1" : {
 				"date" : "1/15/2013",
-				"pic" : "/images/appz/news2.jpg",
+				"pic" : "https://www.filepicker.io/api/file/XGHLSwHRHGVae18iIuw7",
 				"title" : "海壽司官方 iPhone App 啓動派對",
 				"url" : "http://www.appz.com.tw/news.php?PID=46"
 			}
@@ -173,7 +173,7 @@
 		"contact_info" :{
 			"name" : "Carina Fang",
 			"title" : "人資部經理",
-			"pic" : "/images/appz/contact_pic.jpg",
+			"pic" : "https://www.filepicker.io/api/file/7bCfbDYMSwWSfIbUVRv2",
 			"email" : "info@appz.com.tw",
 			"address" : "新北市板橋區中山路二段62號9F-7",
 			"phone" : "02-2952-8655",

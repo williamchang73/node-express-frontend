@@ -55,7 +55,7 @@ companyController.setWorkingSpaces = function(data) {
 	$.each( data, function(i, picinfo) {
 		if(++i>startIndex){
 	        var $eachPicinfo = $workspace.clone();
-	        $eachPicinfo.find("img").attr("src", picinfo.pic)
+	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop')
 	        .end()
 	        .find('.text h6')
 	        .text(picinfo.title)
@@ -76,23 +76,27 @@ companyController.setWorkingSpaces = function(data) {
     //because this is slider need to preload first
     coverslide();
     
-    //for uploading the photos
-	$('.uploadpic').on('click', function(e) {
-		//using filepicker.io
-        filepicker.pick({
-		    mimetypes: ['image/*', 'text/plain'],
-		    container: 'window',
-		    services:['COMPUTER', 'FACEBOOK', 'GMAIL'],
-		  },
-		  function(FPFile){
-		    console.log(JSON.stringify(FPFile));
-		  },
-		  function(FPError){
-		    console.log(FPError.toString());
-		  }
-		);
-    });
-
+    if(global_mode == 'edit'){
+    	//for uploading the photos
+		$('.uploadpic').on('click', function(e) {
+			//using filepicker.io
+	        filepicker.pick({
+			    mimetypes: ['image/*', 'text/plain'],
+			    container: 'window',
+			    services:['COMPUTER','URL','FACEBOOK','FLICKR','PICASA'],
+			    openTo: 'COMPUTER',
+			    maxSize: 3000*1024, //3 MB
+			    multiple: 'true'
+			  },
+			  function(FPFile){
+			    console.log(JSON.stringify(FPFile));
+			  },
+			  function(FPError){
+			    console.log(FPError.toString());
+			  }
+			);
+	    });
+    }
 }
 
 
@@ -101,7 +105,7 @@ companyController.setEvent = function(data) {
 	var $eventCell = $('#event').remove().clone();
 	$.each( data, function(i, event) {
 		var $eachEvent = $eventCell.clone();
-		$eachEvent.find("img").attr("src", event.pic)
+		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop')
 		.end()
 		.find("h3").text(event.title)
 		.end()
@@ -125,7 +129,7 @@ companyController.setPeople = function(data) {
 	var $peopleCell = $('#people_cell').remove().clone();
 	$.each( data, function(i, person) {
 		var $eachPerson = $peopleCell.clone();
-		$eachPerson.find("img").attr("src", person.headpic)
+		$eachPerson.find("img").attr("src", person.headpic+'/convert?w=171&h=171&fit=crop')
 		.end()
 		.find(".name").text(person.name)
 		.end()
@@ -221,7 +225,7 @@ companyController.setNews = function(data) {
 		.end()
 		.find(".date").text(news.date)
 		.end()
-		.find("img").attr('src', news.pic)
+		.find("img").attr('src', news.pic+'/convert?w=62&h=62&fit=crop')
 		.end()
 		.find(".title").text(news.title)
 		.end();
@@ -241,7 +245,7 @@ companyController.setContact = function(data) {
 	$footer.find('#contact_facebook').attr('href', data.facebook);
 	$footer.find('.author').find('.info').text(data.title);
 	$footer.find('.author').find('.name').text(data.name);
-	$footer.find('.author').find('img').attr('src', data.pic);
+	$footer.find('.author').find('img').attr('src', data.pic+'/convert?w=62&h=62&fit=crop');
 }
 
 
