@@ -4,16 +4,19 @@
  */
 var companyController = new SWSController;
 companyController.init = function() {
-	companyController.getCompanyData();	
 }
 
-companyController.initWidget = function() {}
+companyController.initWidget = function() {
+	companyController.getCompanyData();
+}
 
+companyController.initBinding = function() {
+}
 
 companyController.getCompanyData = function() {
     var that = this;
     SWSUtility.ajax({    
-        url :"/data/appz.json",       
+        url :"/data/"+global_company_name+".json",       
         data : {},
         type : 'GET',
         async : false,
@@ -36,7 +39,11 @@ companyController.getCompanyData = function() {
 
 //set up event
 companyController.setCompanyInfo = function(data) {
-	$('.brand strong').text('Inside - ' + data.name);
+	var displaymode = '';
+	if(global_mode == 'edit'){
+		displaymode = '- edit';
+	}
+	$('.brand strong').text('Inside - ' + data.name + displaymode);
 	$('#slogan h3 p').text(data.slogan);
 }
 
@@ -68,6 +75,24 @@ companyController.setWorkingSpaces = function(data) {
     $workspace = null;
     //because this is slider need to preload first
     coverslide();
+    
+    //for uploading the photos
+	$('.uploadpic').on('click', function(e) {
+		//using filepicker.io
+        filepicker.pick({
+		    mimetypes: ['image/*', 'text/plain'],
+		    container: 'window',
+		    services:['COMPUTER', 'FACEBOOK', 'GMAIL'],
+		  },
+		  function(FPFile){
+		    console.log(JSON.stringify(FPFile));
+		  },
+		  function(FPError){
+		    console.log(FPError.toString());
+		  }
+		);
+    });
+
 }
 
 

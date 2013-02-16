@@ -4,6 +4,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , index = require('./routes/index')
   , company = require('./routes/company')
   , http = require('http')
   , fs = require('fs')
@@ -39,9 +40,10 @@ app.configure('development', function(){
 });
 
 
-app.get('/', company.index); //to do need a index file
+app.get('/', index.index); //to do need a index file
 app.get('/company', company.index);
 app.get('/company/:id', company.index);
+app.get('/company/:id/edit', company.edit);
 
 
 

@@ -5,8 +5,17 @@
     	<script src="/javascripts/default/theme.js"></script>
     	<script src="/javascripts/lib/util/swsController.js"></script>
     	<script src="/javascripts/lib/util/swsUtil.js"></script>
-        <script type="text/javascript">
-  		var uvOptions = {};
+    	<script src="//api.filepicker.io/v1/filepicker.js"></script>
+    	<script type="text/javascript">
+    	//about us global variable
+    	var global_company_name = "<%=company_name%>";
+    	var global_mode = "<%=mode%>";
+    	
+    	//filepicker
+    	filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
+    	
+    	//user voice
+        var uvOptions = {};
 		  (function() {
 		    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
 		    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/kTLcZG7JmmNHmZ9IpDfkNA.js';
