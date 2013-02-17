@@ -55,12 +55,15 @@ companyController.setWorkingSpaces = function(data) {
 	var $workspace = $('#workspace').remove().clone();
 	var startIndex = 4;
 	$.each( data, function(i, picinfo) {
-		if(++i>startIndex){
+		if(i>startIndex-1){
 	        var $eachPicinfo = $workspace.clone();
 	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop')
 	        .end()
 	        .find('.text h6')
 	        .text(picinfo.title)
+	        .end()
+	        .find('a')
+	        .attr('id', 'workspace_'+i)
 	        .end()
 	        .find('.text p')
 	        .text(picinfo.desc)
@@ -74,11 +77,13 @@ companyController.setWorkingSpaces = function(data) {
 	        .end();
 		}
     });
+    
+    
+    
     $workspace = null;
     //because this is slider need to preload first
     coverslide();
-	photoGallery();    
-    
+
     if(global_mode == 'edit'){
     	//for uploading the photos
 		$('.uploadpic').on('click', function(e) {
@@ -99,6 +104,20 @@ companyController.setWorkingSpaces = function(data) {
 			  }
 			);
 	    });
+    }else{ //for viewing
+    	$('.uploadpic').on('click', function() {
+    		var photoid = $(this).attr("id");
+    		console.log(photoid.replace('workspace_', 'gallery_photo_'));
+    		$('#'+photoid.replace('workspace_', 'gallery_photo_')).click();
+	    });
+    	
+    	var photos = [];
+    	$.each( data, function(i, picinfo) {
+			photos.push( '<li><a id="gallery_photo_'+i+'" href="'+picinfo.pic+'" rel="prettyPhoto[workspace]" title="'+picinfo.title+'">-</a></li>' );
+		});
+		var gallery = '<ul class="gallery clearfix hide">' + photos.join('') + '</ul>';
+		$('#showcase').append(gallery);
+		photoGallery();
     }
 }
 
@@ -644,17 +663,14 @@ var coverslide = function(data) {
 
 //set up photo gallery
 var photoGallery = function(data) {
-	$("area[rel^='prettyPhoto']").prettyPhoto();
-				
-	$(".gallery a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
-
-	$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-		changepicturecallback: function(){ initialize(); }
+	$(".gallery a[rel^='prettyPhoto']").prettyPhoto(
+		{
+			animation_speed:'normal',
+			theme:'light_square',
+			slideshow:4000, 
+			autoplay_slideshow: false,
+			opacity : 0.8,
+			social_tools : false,
+			overlay_gallery : false
 	});
-
-	$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-		changepicturecallback: function(){ _bsap.exec(); }
-	});	
 }
