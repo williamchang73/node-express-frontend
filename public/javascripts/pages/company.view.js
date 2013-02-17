@@ -107,7 +107,6 @@ companyController.setWorkingSpaces = function(data) {
     }else{ //for viewing
     	$('.uploadpic').on('click', function() {
     		var photoid = $(this).attr("id");
-    		console.log(photoid.replace('workspace_', 'gallery_photo_'));
     		$('#'+photoid.replace('workspace_', 'gallery_photo_')).click();
 	    });
     	
@@ -201,7 +200,6 @@ companyController.clickServicesCircle = function() {
     var $circles = $container.find(".areas .circle");
 
     $circles.click(function () {
-    	console.log('click');    	
         var index = $circles.index(this);
         $texts.fadeOut();
         $texts.eq(index).fadeIn();
