@@ -2,58 +2,58 @@
 	"data" : {
 		"company_info" : {
 			"name" : "Google 美商科高國際有限公司",
-			"slogan" : "Google 的使命在於匯整全球資訊，供大眾使用，使人人受惠。Google 在全球擁有超過 70 個據點，分佈於 40 多個國家/地區。Google 台灣辦公室是在台北101大樓的73樓，也是 Google 在全球的據點中高度最高的辦公室",
+			"slogan" : "Google 的使命在於匯整全球資訊，供大眾使用，使人人受惠。我們公司的歷史雖不算長，卻已有不少可圈可點的精彩事蹟。Google 自 1998 年創立至今迅速成長，目前服務對象涵蓋世界各地無數的使用者和客戶。Google在台招募人才沒有人數限制，只看能力，不限學歷，只要有好奇心和挑戰困難的勇氣，Google都張開雙臂歡迎。",
 			"logopic" : "https://www.filepicker.io/api/file/VOuUNU9BQ3qgR4dn7G2N"
 		},
 		"company_pic" : {
 			"0" : {
-				"pic" : "https://www.filepicker.io/api/file/A0zhmxYlRm6agcgczKbf",
-				"title" :	"special",
+				"pic" : "https://www.filepicker.io/api/file/GGr0orMmRaOsnMATOyxf",
+				"title" :	"Google 台灣辦公室＠台北101",
 				"desc" : "餐飲區旁邊的吧台"
 			},
 			"1" : {
-				"pic" : "https://www.filepicker.io/api/file/sllNHS4ZR0WPdQHlEBya",
-				"title" :	"playground",
+				"pic" : "https://www.filepicker.io/api/file/XFFu8WbUT0qz1gsvQVgN",
+				"title" :	"73F員工餐廳",
 				"desc" : "腦力激盪的小會議室"
 			},
 			"2" : {
-				"pic" : "https://www.filepicker.io/api/file/9jxQ0d1LQ6CNdGqeeSYL",
-				"title" :  "comfortable",
-				"desc" : "辦公室73F的景觀"
+				"pic" : "https://www.filepicker.io/api/file/Ggtl0WTOR6mTxYV1TMR4",
+				"title" :  "辦公室窗外一景",
+				"desc" : "辦公室窗外一景"
 			},
 			"3" : {
-				"pic" : "https://www.filepicker.io/api/file/ezuCCkuAS9a1OE6ZvdSE",
-				"title" :	"workingspace",
+				"pic" : "https://www.filepicker.io/api/file/trLfswunTNeHKdmct45k",
+				"title" :	"入口迎賓櫃台",
 				"desc" : "辦公室迎賓櫃台"
 			},
 			"4" : {
 				"pic" : "https://www.filepicker.io/api/file/6OgdVnuhS4aail7HAJ44",
-				"title" :	"workingspace",
+				"title" :	"辦公室環境",
 				"desc" : "辦公室一隅的休息區"
 			},
 			"5" : {
 				"pic" : "https://www.filepicker.io/api/file/yMs5dTMXR4KNfvSxGDXl",
-				"title" :	"workingspace",
+				"title" :	"辦公室環境",
 				"desc" : "同事的辦公桌"
 			},
 			"6" : {
 				"pic" : "https://www.filepicker.io/api/file/2KUwSBwPSqPEvGLA4WMs",
-				"title" :	"workingspace",
+				"title" :	"辦公室環境",
 				"desc" : "可隨意佈置的工作環境"
 			},
 			"7" : {
 				"pic" : "https://www.filepicker.io/api/file/yNzEFGH7SlukZeimn4u5",
-				"title" :	"workingspace",
+				"title" :	"辦公室環境",
 				"desc" : "餐廳一隅的座位區"
 			},
 			"8" : {
 				"pic" : "https://www.filepicker.io/api/file/ukKy8mNeTe2MiZQUUM0h",
-				"title" :	"workingspace",
+				"title" :	"辦公室環境",
 				"desc" : "開放式的工作環境"
 			},
 			"9" : {
 				"pic" : "https://www.filepicker.io/api/file/plhOFxAVRtu35DStNyM1",
-				"title" :	"workingspace",
+				"title" :	"辦公室環境",
 				"desc" : "辦公室一隅的討論區"
 			}
 		},
@@ -93,7 +93,7 @@
 				"facebook" : "" 
 			},
 			"2" : {
-				"name" : "Funny Liu", 
+				"name" : "陳俊廷", 
 				"headpic"  : "https://www.filepicker.io/api/file/7xHtc4guTs2LHQf2ZlJU", 
 				"title" : "Google 台灣總經理", 
 				"quote" : "想象是什麼並不重要，想象能做什麼才重要", 
@@ -129,7 +129,7 @@
 		"job" : {
 			"0" : {
 				"title" : "Account Manager - Shanghai",
-				"pay" : "80000",
+				"pay" : "65,000",
 				"details" : {
 					"0" : "工作地點：上海市", 
 					"1" : "不需負擔管理責任",
@@ -137,8 +137,8 @@
 				}
 			},
 			"1" : {
-				"title" : "資料中心工業設備技師",
-				"pay" : "100000",
+				"title" : "工業設備技師",
+				"pay" : "85,000",
 				"details" : {
 					"0" : "操作，監控，維護以及對設施系統中的異常情況作出反應.", 
 					"1" : "領域包括：電氣，機械，建 築監測和控制.",
@@ -146,8 +146,8 @@
 				}
 			},
 			"2" : {
-				"title" : "Google: Field Sales Executive",
-				"pay" : "90000",
+				"title" : "Field Sales Executive",
+				"pay" : "55,000",
 				"details" : {
 					"0" : "工作地點：台北市", 
 					"1" : "不需負擔管理責任",
