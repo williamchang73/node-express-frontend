@@ -4,6 +4,8 @@
  */
 var companyController = new SWSController;
 companyController.init = function() {
+	//filepicker
+	filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
 }
 
 companyController.initWidget = function() {
@@ -75,6 +77,7 @@ companyController.setWorkingSpaces = function(data) {
     $workspace = null;
     //because this is slider need to preload first
     coverslide();
+	photoGallery();    
     
     if(global_mode == 'edit'){
     	//for uploading the photos
@@ -635,4 +638,23 @@ var coverslide = function(data) {
         center = $(window).width() / 2;
         d()
     });
+}
+
+
+
+//set up photo gallery
+var photoGallery = function(data) {
+	$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+	$(".gallery a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
+
+	$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+		changepicturecallback: function(){ initialize(); }
+	});
+
+	$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+		changepicturecallback: function(){ _bsap.exec(); }
+	});	
 }

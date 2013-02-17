@@ -1,6 +1,15 @@
-<% layout('../default/layout/layout.htm') -%>	
-<% stylesheet('/stylesheets/pages/company.view.css') -%>
+<% layout('../default/layout/layout.htm') -%>
+
+<% stylesheet('/3rd_party/prettyPhoto/css/prettyPhoto.css') -%>
+<% stylesheet('/stylesheets/pages/company.view.css') -%>	
+
+<% script('/3rd_party/filepicker/filepicker.js') -%>
+<% script('/3rd_party/prettyPhoto/js/jquery.prettyPhoto.js') -%>
 <% script('/javascripts/pages/company.view.js') -%>
+
+
+
+
 	<section id="feature_slider" class="disabled">
         <article class="slide" id="showcasing" style="background-image: url(/images/aqua.jpg); display: none; background-position: 50% 0%; background-repeat: repeat no-repeat;">
             <div id="cover_1" class="info" style="display: none;">
@@ -47,7 +56,7 @@
                     <!-- Feature -->
                     <div id="workspace" class="span4 feature">
                         <div class="img_box">
-                            <a class="uploadpic" href="javascript:void(0)">
+                            <a class="uploadpic" href="javascript:void(0)" >
                                 <img src="http://placehold.it/285x215">
                                 <span class="circle"> 
                                     <span class="plus">+</span>
@@ -64,6 +73,10 @@
                 </div>
             </div>
         </div>
+        <!-- photo gallery -->
+        <ul class="gallery clearfix">
+			<li><a href="https://www.filepicker.io/api/file/V1BPmaM2TACkmoyf1dXw/convert?w=285&h=215&fit=crop" rel="prettyPhoto[gallery1]" title="swew">ss</a></li>
+		</ul>
     </div>
 
     <div id="features">
@@ -226,6 +239,8 @@
             </div>
         </div>
     </footer>
+    
+    <!-- page variable -->
     <script type="text/javascript">
     	//about us global variable
     	var global_company_name = "<%=company_name%>";
