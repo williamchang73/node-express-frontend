@@ -7,54 +7,54 @@
 		},
 		"company_pic" : {
 			"0" : {
-				"pic" : "https://www.filepicker.io/api/file/qsf8XsBQRnNJVdZMVBx2",
-				"type" :	"special",
-				"desc" : "desc 1"
+				"pic" : "https://www.filepicker.io/api/file/A0zhmxYlRm6agcgczKbf",
+				"title" :	"special",
+				"desc" : "餐飲區旁邊的吧台"
 			},
 			"1" : {
-				"pic" : "https://www.filepicker.io/api/file/k0amvSfzSSmPdj7vGbwQ",
-				"type" :	"playground",
-				"desc" : "desc 2"
+				"pic" : "https://www.filepicker.io/api/file/sllNHS4ZR0WPdQHlEBya",
+				"title" :	"playground",
+				"desc" : "腦力激盪的小會議室"
 			},
 			"2" : {
-				"pic" : "https://www.filepicker.io/api/file/4nPWBFyvRGKvrwtaSpVy",
-				"type" :  "comfortable",
-				"desc" : "desc 3"
+				"pic" : "https://www.filepicker.io/api/file/9jxQ0d1LQ6CNdGqeeSYL",
+				"title" :  "comfortable",
+				"desc" : "辦公室73F的景觀"
 			},
 			"3" : {
-				"pic" : "https://www.filepicker.io/api/file/jupe4TyhSba3RfjWtUSZ",
-				"type" :	"workingspace",
-				"desc" : "desc 4"
+				"pic" : "https://www.filepicker.io/api/file/ezuCCkuAS9a1OE6ZvdSE",
+				"title" :	"workingspace",
+				"desc" : "辦公室迎賓櫃台"
 			},
 			"4" : {
-				"pic" : "https://www.filepicker.io/api/file/sIP6YxbgTzGI8ajQMn3w",
-				"type" :	"workingspace",
-				"desc" : "desc 5"
+				"pic" : "https://www.filepicker.io/api/file/6OgdVnuhS4aail7HAJ44",
+				"title" :	"workingspace",
+				"desc" : "辦公室一隅的休息區"
 			},
 			"5" : {
 				"pic" : "https://www.filepicker.io/api/file/yMs5dTMXR4KNfvSxGDXl",
-				"type" :	"workingspace",
-				"desc" : "desc 6"
+				"title" :	"workingspace",
+				"desc" : "同事的辦公桌"
 			},
 			"6" : {
 				"pic" : "https://www.filepicker.io/api/file/2KUwSBwPSqPEvGLA4WMs",
-				"type" :	"workingspace",
-				"desc" : "desc 7"
+				"title" :	"workingspace",
+				"desc" : "可隨意佈置的工作環境"
 			},
 			"7" : {
 				"pic" : "https://www.filepicker.io/api/file/yNzEFGH7SlukZeimn4u5",
-				"type" :	"workingspace",
-				"desc" : "desc 8"
+				"title" :	"workingspace",
+				"desc" : "餐廳一隅的座位區"
 			},
 			"8" : {
 				"pic" : "https://www.filepicker.io/api/file/ukKy8mNeTe2MiZQUUM0h",
-				"type" :	"workingspace",
-				"desc" : "desc 9"
+				"title" :	"workingspace",
+				"desc" : "開放式的工作環境"
 			},
 			"9" : {
 				"pic" : "https://www.filepicker.io/api/file/plhOFxAVRtu35DStNyM1",
-				"type" :	"workingspace",
-				"desc" : "desc 10"
+				"title" :	"workingspace",
+				"desc" : "辦公室一隅的討論區"
 			}
 		},
 		"events" :{
@@ -112,12 +112,12 @@
 		"core_value" : {
 			"0" : {
 				"core" : "使用者中心", 
-				"title" : "只要以使用者為中心，一切就會水到渠成", 
+				"title" : "以使用者為中心", 
 				"desc" : "Google 剛創立時，就是以提供使用者最佳服務為宗旨。無論是設計新的網際網路瀏覽器，還是要讓首頁換上新介面，我們都極為謹慎，確保一切都能夠滿足使用者的需求，而非謀求公司自身的目標或利益。"
 			},
 			"1" : {
 				"core" : "專注", 
-				"title" : "專心將一件事做到盡善盡美", 
+				"title" : "專注的做一件事", 
 				"desc" : "Google 是專門提供搜尋服務的業者，我們擁有全球最龐大的研究陣容，致力於解決各種搜尋技術方面的問題，因此我們深知自己的長處所在，也瞭解應該如何精益求精，更上層樓。"
 			},
 			"2" : {
@@ -129,7 +129,7 @@
 		"job" : {
 			"0" : {
 				"title" : "Account Manager - Shanghai",
-				"pay" : "80",
+				"pay" : "80000",
 				"details" : {
 					"0" : "工作地點：上海市", 
 					"1" : "不需負擔管理責任",
@@ -138,7 +138,7 @@
 			},
 			"1" : {
 				"title" : "資料中心工業設備技師",
-				"pay" : "100",
+				"pay" : "100000",
 				"details" : {
 					"0" : "操作，監控，維護以及對設施系統中的異常情況作出反應.", 
 					"1" : "領域包括：電氣，機械，建 築監測和控制.",
@@ -147,7 +147,7 @@
 			},
 			"2" : {
 				"title" : "Google: Field Sales Executive",
-				"pay" : "90",
+				"pay" : "90000",
 				"details" : {
 					"0" : "工作地點：台北市", 
 					"1" : "不需負擔管理責任",
@@ -171,9 +171,9 @@
 			}
 		},
 		"contact_info" :{
-			"message" : "職務應徵",
-			"pic" : "https://www.filepicker.io/api/file/XTUD4rCeRdS9lIDZpmP7",
-			"title" : "人資部經理",
+			"name" : "許淑華",
+			"title" : "人資部協理",
+			"pic" : "https://www.filepicker.io/api/file/oJEzlZHRXacf398hBu5u",
 			"email" : "jobs@google.com",
 			"address" : "台北市信義區信義路五段7號73樓",
 			"phone" : "02-8729-6000",
