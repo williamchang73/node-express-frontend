@@ -1,0 +1,199 @@
+{
+	"data" : {
+		"company_info" : {
+			"name" : "appWorks Venture 之初創投",
+			"slogan" : "創立於 2009 年，appWorks 之初創投是一家位於台北、專注於中文網路與行動應用的超級天使創投。我們是早期、長期投資人，喜歡有熱血、有經驗的團隊，從種子時期開始支持，一路陪著你找到受人們歡迎的產品、商業模式、營收和獲利。appWorks 的團隊有超過 30 年、7 家網路公司的創業經驗，深刻了解資金之外，創業還需要市場、策略、行銷、管理、夥伴、人脈等許多要素，所以只要你能夠帶著決心與和努力來，其他的我們會努力幫忙你解決。",
+			"logopic" : "https://www.filepicker.io/api/file/VOuUNU9BQ3qgR4dn7G2N"
+		},
+		"company_pic" : {
+			"0" : {
+				"pic" : "https://www.filepicker.io/api/file/TuaXsPbTjexf9VfaK6nw",
+				"title" :	"我們的工作環境",
+				"desc" : ""
+			},
+			"1" : {
+				"pic" : "https://www.filepicker.io/api/file/sPsFWPB8Q4SVshu8VDF7",
+				"title" :	"創業現場說明",
+				"desc" : ""
+			},
+			"2" : {
+				"pic" : "https://www.filepicker.io/api/file/OcZSbc6oSBGHSWHhosZn",
+				"title" :  "開放式辦公室",
+				"desc" : ""
+			},
+			"3" : {
+				"pic" : "https://www.filepicker.io/api/file/Odkm7RQfSpqG4jQBesZF",
+				"title" :	"appWorks Demo Day",
+				"desc" : ""
+			},
+			"4" : {
+				"pic" : "https://www.filepicker.io/api/file/aBOBVFpQCt5YZ6Ia0nFw",
+				"title" :	"辦公室環境",
+				"desc" : "辦公室一隅的區域"
+			},
+			"5" : {
+				"pic" : "https://www.filepicker.io/api/file/yl09jtRBSYGzERyozgzk",
+				"title" :	"辦公室環境",
+				"desc" : "創業夥伴的工作環境"
+			},
+			"6" : {
+				"pic" : "https://www.filepicker.io/api/file/9iUdsH4nTw6sng9KCjCh",
+				"title" :	"辦公室環境",
+				"desc" : "appWorks 工作同仁"
+			},
+			"7" : {
+				"pic" : "https://www.filepicker.io/api/file/fjsyzuArTjSRX83op1sM",
+				"title" :	"辦公室環境",
+				"desc" : "各工作團隊簡報"
+			},
+			"8" : {
+				"pic" : "https://www.filepicker.io/api/file/jbrdJQAmTT2rp800T9ZM",
+				"title" :	"辦公室環境",
+				"desc" : "工作同仁準備 Demo Day"
+			},
+			"9" : {
+				"pic" : "https://www.filepicker.io/api/file/c0NUHMvnQd6h5NXtjggs",
+				"title" :	"辦公室環境",
+				"desc" : "Mr. Jamie 接受專訪"
+			}
+		},
+		"events" :{
+			"0" : { 
+				"title" : "第五屆 appWorks Demo Day",
+				"desc" : "所有參與育成計畫的團隊，都會在募資上得到 appWorks 的全力支持。視團隊的需要，appWorks 本身通常可以投資台幣 50 萬至 3,000 萬，佔股比率約為 5%-20%。另外，在 appWorks Demo Day 後，許多團隊們也能向其他創投、天使成功的募得更多資金。",
+				"pic" : "https://www.filepicker.io/api/file/eC1s00YaRi2doyq9yUlm"
+			},
+			"1" : { 
+				"title" : "第四屆 appWorks Demo Day", 
+				"desc" : "兩、三個人的小團隊創業，有太多沒效率的地方。你往往沒空全盤蒐集情報，找不到人一起討論策略和方向、一起研究最新的 API，也很少有機會從其他創業團隊的失敗經驗中學習。這些問題在變動快速的網路業尤其嚴重，而育成計畫就是在幫助你改善這樣的情況。在 appWorks，你將與其他來自各地的一流團隊一起創業，加上我們 4 位合夥人和 20 位從網路業第一線請來的顧問群，都將在這裡幫助你克服創業的種種困難，讓你可以更專注在創造出受人們喜愛的產品之上。", 
+				"pic" : "https://www.filepicker.io/api/file/WjlKT47FQiK7X9VkpO7H"
+			},
+			"2" : { 
+				"title" : "第三屆 appWorks Demo Day",
+				"desc" : "在 appWorks，我們重新定義「投資」。它不應該只是金錢與股票的交換，而是如何真正幫助創業者成功。從育成計畫的六個月密集輔導，到人才、業務、公關、行銷、營運、財務等工作的支援，甚至是促進團隊間的協同合作，對我們而言，都是「投資」。投資是關係，而不是一種買賣，我們鼓勵你多去跟以下我們投資的創業團隊們聊聊，了解 appWorks 是如何幫助他們。如果你有興趣讓 appWorks 投資 (如何向創投提案?)，歡迎跟我們聯絡：contact@appworks.tw", 
+				"pic" : "https://www.filepicker.io/api/file/65pt9SYPTFeshqv4kwDM"
+			}
+		
+		},
+		"people" : {
+			"0" : {
+				"name" : "林之晨 Jamie C. Lin", 
+				"headpic"  : "https://www.filepicker.io/api/file/l1iRGynTStKEf0tP2CQe", 
+				"title" : "合夥人 Founding Partner", 
+				"quote" : "1999 年份的網路創業老骨頭", 
+				"email" : "", 
+				"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			},
+			"1" : {
+				"name" : "詹益鑑博士 IC Jan, PhD", 
+				"headpic"  : "https://www.filepicker.io/api/file/WrcMc08pTIaV523LmLtg", 
+				"title" : "合夥人 Partner", 
+				"quote" : "具有跨領域背景及創業投資雙軌經歷", 
+				"email" : "", 
+				"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			},
+			"2" : {
+				"name" : "程九如 Nice Cheng", 
+				"headpic"  : "https://www.filepicker.io/api/file/z3uY9suqQrWJnlMrlIAS", 
+				"title" : "合夥人 Partner", 
+				"quote" : "網路創業的世界，學歷一點都不重要。", 
+				"email" : "", 
+				"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			},
+			"3" : {
+				"name" : "楊雅朱 Phini Yang", 
+				"headpic"  : "https://www.filepicker.io/api/file/zCnbpMQCQqS83X5JqVpm", 
+				"title" : "經理", 
+				"quote" : "負責育成計畫管理與媒體關係", 
+				"email" : "", 
+				"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			}
+		},
+		"core_value" : {
+			"0" : {
+				"core" : "資金＋育成", 
+				"title" : "絕佳的創業加速器", 
+				"desc" : "開始於 2010 年 6 月，appWorks 育成計畫提供一種更有效率的創業方式。每六個月一期，創業團隊進駐 appWorks 育成中心，接受我們最全面的顧問、輔導，將產品和創業計畫調整到最佳狀態，最後在 appWorks Demo Day 活動向上百位出席的投資人介紹你們的成果，大大提升成功募資的機會。"
+			},
+			"1" : {
+				"core" : "群力", 
+				"title" : "站在他們的肩膀", 
+				"desc" : "Richi, EZTABLE, TechOrange, Goodlife, QLL, Tagtoo, GameApe, 5945 呼叫師傅, Mamibuy, 獎金獵人等這些知名的網站、App 開發商，都是從 appWorks 成功創業的公司，也扮演著非常重要的「學長姐」角色。他們擁有第一手的市場資訊、人脈、技術、經驗，只要學弟妹們有需要，他們都非常樂於伸出援手，也是 appWorks 育成計畫會越來越有價值的原因。"
+			},
+			"2" : {
+				"core" : "人才", 
+				"title" : "創業求才", 
+				"desc" : "創業的過程中，常常最難找的是人才。無論是想要找一起打拼的共同創辦人，或是需要技術高強的工程師，求才的過程，往往非常繁瑣。所以，本著服務創業團隊的精神，appWorks 免費提供創業求才的服務。"
+			}
+		},
+		"job" : {
+			"0" : {
+				"title" : "網路行銷經理",
+				"pay" : "35,000",
+				"details" : {
+					"0" : "工作地點：台北市", 
+					"1" : "不需負擔管理責任",
+					"2" : "工作經歷不拘，大學以上"
+				}
+			},
+			"1" : {
+				"title" : "行銷公關＆媒體主管",
+				"pay" : "55,000",
+				"details" : {
+					"0" : "工作地點：台北市", 
+					"1" : "不需負擔管理責任",
+					"2" : "工作經歷不拘，大學以上"
+				}
+			},
+			"2" : {
+				"title" : "專案管理人員",
+				"pay" : "面議",
+				"details" : {
+					"0" : "工作地點：台北市", 
+					"1" : "不需負擔管理責任",
+					"2" : "無需出差外派"
+				}
+			}
+		},
+		"joy_apply_url" : "http://appworks.tw/jobs/",
+		"latest_news" : {
+			"0" : {
+				"date" : "2012",
+				"pic" : "https://www.filepicker.io/api/file/ZcSoNIZSTaOT0y7CLsNQ",
+				"title" : "第六屆 appWorks 育成計畫",
+				"desc"	: "第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫",
+				"url" : "http://appworks.tw/incubator/",
+				"source" : "蘋果日報"
+			},
+			"1" : {
+				"date" : "三月，2013",
+				"pic" : "https://www.filepicker.io/api/file/ZcSoNIZSTaOT0y7CLsNQ",
+				"title" : "第七屆 appWorks 育成計畫",
+				"desc"	: "第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫",
+				"url" : "http://appworks.tw/incubator/",
+				"source" : "蘋果日報"
+			},
+			"2" : {
+				"date" : "三月，2013",
+				"pic" : "https://www.filepicker.io/api/file/ZcSoNIZSTaOT0y7CLsNQ",
+				"title" : "第七屆 appWorks 育成計畫",
+				"desc"	: "第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫",
+				"url" : "http://appworks.tw/incubator/",
+				"source" : "蘋果日報"
+			}
+		},
+		"contact_info" :{
+			"name" : "林宛靜",
+			"title" : "人資部經理",
+			"pic" : "https://www.filepicker.io/api/file/QarlIoTtaPxkE5y7y8mg",
+			"email" : "incubator@appworks.tw",
+			"address" : "台北市信義區基隆路一段180號5F",
+			"phone" : "02-2765-0757",
+			"facebook" : "https://www.facebook.com/AppWorksVentures"
+		}
+	},
+	"status" : "true",
+	"status_ext":"",
+	"error_code":"",
+	"error_message":""
+}

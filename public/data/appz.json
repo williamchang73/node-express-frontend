@@ -2,64 +2,64 @@
 	"data" : {
 		"company_info" : {
 			"name" : "APPz 艾普斯數位",
-			"slogan" : "專業 iPhone App，iPad App，Android App 開發設計團隊。APPz 協助品牌開發互動性強大的App，以 App 經營顧客，並執行 App 行銷方案。",
+			"slogan" : "APPz 協助品牌打造功能強大的專屬 iPhone，iPad，與 Android App。 APPz 所提供的開發工具也是目前市場上功能最強大的 APP 編輯平台，使用者無需要具備撰寫程式碼的知識，只要透過非常直覺的操作與設定，就能製作一個品牌客制化的專屬應用程式。",
 			"logopic" : ""
 		},
 		"company_pic" : {
 			"0" : {
 				"pic" : "https://www.filepicker.io/api/file/ScIM9j9MThOWWpUQikg5",
-				"title" : "Most Special",
+				"title" : "激發創意的環境",
 				"desc" : "desc 1"
 			},
 			"1" : {
-				"pic" : "https://www.filepicker.io/api/file/nSusN5c7TcOdOT9FDGha",
-				"title" : "Playing Ground",
+				"pic" : "https://www.filepicker.io/api/file/MF1iqyhMSr6XHhkU2b0t",
+				"title" : "舒適會議空間",
 				"desc" : "desc 2"
 			},
 			"2" : {
-				"pic" : "https://www.filepicker.io/api/file/bZicw7quTPG6CNAn7gag",
-				"title" : "Most Comfortable",
+				"pic" : "https://www.filepicker.io/api/file/ao7Ce2POQ6KqqdirtXvg",
+				"title" : "休息區一角",
 				"desc" : "desc 3"
 			},
 			"3" : {
-				"pic" : "https://www.filepicker.io/api/file/lRa1G7ECSsOdtHN3JZC8",
-				"title" : "Working Space",
+				"pic" : "https://www.filepicker.io/api/file/5aAZI1nSGWgBkK02T5IQ",
+				"title" : "辦公室全景",
 				"desc" : "desc 4"
 			},
 			"4" : {
 				"pic" : "https://www.filepicker.io/api/file/V1BPmaM2TACkmoyf1dXw",
-				"title" : "Employee's Desk 5",
-				"desc" : "desc 5"
+				"title" : "員工座位區",
+				"desc" : "每位同仁都可隨意佈置自己的工作區域。"
 			},
 			"5" : {
 				"pic" : "https://www.filepicker.io/api/file/iWoY4AeYSKmJShcr11Vq",
-				"title" : "Employee's Desk 6",
-				"desc" : "desc 6"
+				"title" : "休息娛樂專區",
+				"desc" : "休息區提供黑膠唱片與唱盤。"
 			},
 			"6" : {
 				"pic" : "https://www.filepicker.io/api/file/iAlJwalCS1i3KDHwiVST",
-				"title" : "Employee's Desk 7",
-				"desc" : "desc 7"
+				"title" : "辦公室一角",
+				"desc" : "員工旅遊從全世界帶回來的紀念品。"
 			},
 			"7" : {
-				"pic" : "https://www.filepicker.io/api/file/EFIA1etSDOZcSKjv9JWv",
-				"title" : "Employee's Desk 8",
-				"desc" : "desc 8"
+				"pic" : "https://www.filepicker.io/api/file/iBF4l3ES6urT1xzu06j5",
+				"title" : "員工座位區",
+				"desc" : "舒適寬廣的個人工作環境。"
 			},
 			"8" : {
-				"pic" : "https://www.filepicker.io/api/file/CedU440yR9iovjxuyREC",
-				"title" : "Employee's Desk 9",
-				"desc" : "desc 9"
+				"pic" : "https://www.filepicker.io/api/file/OH7dufpdRLquAJyXlWAK",
+				"title" : "辦公室環境",
+				"desc" : "APPz 辦公室的入口區域。"
 			},
 			"9" : {
 				"pic" : "https://www.filepicker.io/api/file/8Xg8b15RYuoqYWziEEPO",
-				"title" : "Employee's Desk 10",
-				"desc" : "desc 10"
+				"title" : "配備齊全的廚房",
+				"desc" : "這裡總是塞滿食物與飲料的多功能廚房。"
 			}
 		},
 		"events" :{
 			"0" : { 
-				"title" : "白色派對＠高雄",
+				"title" : "工作之餘，我們更白色派對＠高雄",
 				"desc" : "玩和工作一樣重要，這是在 APPz 我們奉行的最高宗旨，只要有大型的派對或好玩的活動，我們絕對不會錯過。",
 				"pic" : "https://www.filepicker.io/api/file/JzqGxUMUQGS59NZ8bdFh"
 			},
@@ -129,7 +129,7 @@
 		"job" : {
 			"0" : {
 				"title" : "行銷經理",
-				"pay" : "50",
+				"pay" : "36,000",
 				"details" : {
 					"0" : "規劃＆執行年度行銷計劃", 
 					"1" : "執行社群經營計劃",
@@ -138,7 +138,7 @@
 			},
 			"1" : {
 				"title" : "使用者介面設計師",
-				"pay" : "45",
+				"pay" : "38,000",
 				"details" : {
 					"0" : "優化使用者經驗＆執行", 
 					"1" : "網站介面規劃＆設計",
@@ -147,7 +147,7 @@
 			},
 			"2" : {
 				"title" : "資深軟體工程師",
-				"pay" : "50",
+				"pay" : "50,000",
 				"details" : {
 					"0" : "電路設計＆單晶片軟體", 
 					"1" : "PLC可程式控制器",
@@ -161,13 +161,25 @@
 				"date" : "2/5/2013",
 				"pic" : "https://www.filepicker.io/api/file/RKereb27Q5OFhu3vfq1I",
 				"title" : "蘿琳雅官方 iPhone App 啓動派對",
-				"url" : "http://www.appz.com.tw/news.php"
+				"desc"	: "",
+				"url" : "http://www.appz.com.tw/news.php",
+				"source" : "蘋果日報"
 			},
 			"1" : {
 				"date" : "1/15/2013",
 				"pic" : "https://www.filepicker.io/api/file/XGHLSwHRHGVae18iIuw7",
 				"title" : "海壽司官方 iPhone App 啓動派對",
-				"url" : "http://www.appz.com.tw/news.php?PID=46"
+				"desc"	: "",
+				"url" : "http://www.appz.com.tw/news.php?PID=46",
+				"source" : "蘋果日報"
+			},
+			"2" : {
+				"date" : "1/15/2013",
+				"pic" : "https://www.filepicker.io/api/file/XGHLSwHRHGVae18iIuw7",
+				"title" : "海壽司官方 iPhone App 啓動派對",
+				"desc"	: "",
+				"url" : "http://www.appz.com.tw/news.php?PID=46",
+				"source" : "蘋果日報"
 			}
 		},
 		"contact_info" :{

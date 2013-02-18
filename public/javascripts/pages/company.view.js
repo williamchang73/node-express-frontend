@@ -238,18 +238,23 @@ companyController.setJobs = function(data, applyURL) {
 
 //set up latest news
 companyController.setNews = function(data) {
-	var $newsCell = $('#news').find(".post").remove().clone();
+	var $newsCell = $('#news').find(".span4").remove().clone();
+	
 	$.each( data, function(i, news) {
 		var $eachNews = $newsCell.clone();
+		if(i==2){ //last
+			$eachNews.addClass("last");
+		}
 		$eachNews.find("a").attr('href', news.url)
 		.end()
 		.find(".date").text(news.date)
 		.end()
-		.find("img").attr('src', news.pic+'/convert?w=62&h=62&fit=crop')
+		.find("h6").text(news.source)
 		.end()
-		.find(".title").text(news.title)
+		.find("img").attr('src', news.pic+'/convert?w=300&h=189&fit=crop')
+		.end()
+		.find("p").text(news.desc)
 		.end();
-
 		$('#news').append( $eachNews );
     });
 	$newsCell = null;
