@@ -1,6 +1,6 @@
 {
   "name": "aboutus",
-  "version": "0.0.2-21",
+  "version": "0.0.2-22",
   "private": true,
   "scripts": {
     "start": "app.js"
