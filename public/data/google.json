@@ -3,7 +3,8 @@
 		"company_info" : {
 			"name" : "Google 美商科高國際有限公司",
 			"slogan" : "Google 的使命在於匯整全球資訊，供大眾使用，使人人受惠。我們公司的歷史雖不算長，卻已有不少可圈可點的精彩事蹟。Google 自 1998 年創立至今迅速成長，目前服務對象涵蓋世界各地無數的使用者和客戶。Google在台招募人才沒有人數限制，只看能力，不限學歷，只要有好奇心和挑戰困難的勇氣，Google都張開雙臂歡迎。",
-			"logopic" : "https://www.filepicker.io/api/file/VOuUNU9BQ3qgR4dn7G2N"
+			"logopic" : "https://www.filepicker.io/api/file/VOuUNU9BQ3qgR4dn7G2N",
+			"theme" : "red"
 		},
 		"company_pic" : {
 			"0" : {

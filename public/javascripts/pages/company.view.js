@@ -6,6 +6,7 @@ var companyController = new SWSController;
 companyController.init = function() {
 	//filepicker
 	filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
+	
 }
 
 companyController.initWidget = function() {
@@ -23,8 +24,7 @@ companyController.getCompanyData = function() {
         type : 'GET',
         async : false,
         success : function(data) {
-        	// success do nothing;
-			companyController.setCompanyInfo(data.company_info);		
+			companyController.setCompanyInfo(data.company_info);
 			companyController.setWorkingSpaces(data.company_pic);
 			companyController.setEvent(data.events);
 			companyController.setPeople(data.people);
@@ -32,7 +32,7 @@ companyController.getCompanyData = function() {
 			companyController.setJobs(data.job, data.joy_apply_url);
 			companyController.setNews(data.latest_news);
 			companyController.setContact(data.contact_info);
-			companyController.setColorTheme('#4A036F');
+			companyController.setColorTheme();
         },                 
         error : function(data) {
             console.error(data.error_message);
@@ -48,6 +48,31 @@ companyController.setCompanyInfo = function(data) {
 	}
 	$('.brand strong').text('Inside - ' + data.name + displaymode);
 	$('#slogan h3 p').text(data.slogan);
+	companyController.setGlobalThemeColor(data.theme);		
+}
+
+
+//set up themes
+companyController.setGlobalThemeColor = function(color) {
+	console.log(color);
+	if(color == 'purple'){
+		console.log('yes');
+		global_theme_color = '#4A036F';
+	}else if(color == 'red'){
+		global_theme_color = '#550000';
+	}else if(color == 'brown'){
+		global_theme_color = '#553300';
+	}else if(color == 'orange'){
+		global_theme_color = '#A64B00';
+	}else if(color == 'blue'){
+		global_theme_color = '#18496A';
+	}else if(color == 'black'){
+		global_theme_color = '#252528';
+	}else if(color == 'green'){
+		global_theme_color = '#002a00';
+	}else{
+		global_theme_color = '#252528';
+	}
 }
 
 
@@ -178,6 +203,7 @@ companyController.setCoreValue = function(data) {
 		if(i == 0 ){ //should active
 			$eachCore.addClass("active");
 			$eachCoreTitle.addClass("active");
+			$eachCoreTitle.css('background', global_theme_color);
 		}
 		
 		$eachCore.find("h4").text(core.title)
@@ -201,12 +227,14 @@ companyController.clickServicesCircle = function() {
     var $circles = $container.find(".areas .circle");
 
     $circles.click(function () {
+    	//remove click color first
+    	$('.circle').css("background-color", "");
         var index = $circles.index(this);
         $texts.fadeOut();
         $texts.eq(index).fadeIn();
         $circles.removeClass("active");
         $(this).addClass("active");
-        $(this).css('background', '#4A036F');
+        $(this).css('background', global_theme_color);
 	});
 }
 
@@ -277,19 +305,28 @@ companyController.setContact = function(data) {
 
 
 //set up color theme
-companyController.setColorTheme = function(color) {
-	$('#team').css( 'background', color );
-	$('.circle.active').css( 'background', color );
-	$('.circle').hover(
-    		function(){$(this).css({color:color});}
-    		/*
-    function(){
-         $(this).css({color:'black'}); // mouseout
-         */
-    
-	);
-	
-	//$('.circle:hover').css( 'background', color );
+companyController.setColorTheme = function() {
+	$('#team').css( 'background', global_theme_color );
+	$('.circle.active').css( 'background', global_theme_color );
+	$('.dollar').css( 'color', global_theme_color );
+	$('.qty').css( 'color', global_theme_color );
+	$('.month').css( 'color', global_theme_color );
+	$('.order').css( 'background-color', global_theme_color );
+	$('.order').mouseover(function() {
+		$(this).css( 'background', '#333333' );
+	}).mouseout(function(){
+    	$(this).css( 'background', global_theme_color );
+	});
+	$('.start a').mouseover(function() {
+		$(this).css( 'background', global_theme_color );
+	}).mouseout(function(){
+    	$(this).css( 'background', '' );
+	});
+	$("input[type=submit]").mouseover(function() {
+		$(this).css( 'background', global_theme_color );
+	}).mouseout(function(){
+    	$(this).css( 'background', '' );
+	});
 }
 
 
@@ -540,7 +577,7 @@ var coverslide = function(data) {
         }, 800)
     }
     function c() {
-        $("#feature_slider").addClass("disabled").append('<ul id="pagination" /><a href="" id="slide-left" /><a href="" id="slide-right" />');
+        $("#feature_slider").addClass("disabled").append('<ul id="pagination" style="display:none"/><a href="" id="slide-left" /><a href="" id="slide-right" />');
         $("#feature_slider article").each(function () {
             $("#pagination").append('<li><a href="#' + $(this).attr("id") + '">' + $(this).index() + "</a></li>")
         });

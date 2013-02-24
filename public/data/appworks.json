@@ -3,7 +3,8 @@
 		"company_info" : {
 			"name" : "appWorks Venture 之初創投",
 			"slogan" : "創立於 2009 年，appWorks 之初創投是一家位於台北、專注於中文網路與行動應用的超級天使創投。我們是早期、長期投資人，喜歡有熱血、有經驗的團隊，從種子時期開始支持，一路陪著你找到受人們歡迎的產品、商業模式、營收和獲利。appWorks 的團隊有超過 30 年、7 家網路公司的創業經驗，深刻了解資金之外，創業還需要市場、策略、行銷、管理、夥伴、人脈等許多要素，所以只要你能夠帶著決心與和努力來，其他的我們會努力幫忙你解決。",
-			"logopic" : "https://www.filepicker.io/api/file/VOuUNU9BQ3qgR4dn7G2N"
+			"logopic" : "https://www.filepicker.io/api/file/VOuUNU9BQ3qgR4dn7G2N",
+			"theme" : "orange"
 		},
 		"company_pic" : {
 			"0" : {

@@ -3,7 +3,7 @@ html {
 }
 body {
 	position: relative;
-	background: #DDDCE2 url(/images/body_bg.jpg) repeat left top;
+	background: #DDDCE2;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Lato', sans-serif !important;
 	padding-top: 107px;
@@ -234,9 +234,11 @@ header {
 	-webkit-transition: background-color .2s linear;
 	-moz-transition: background-color .2s linear;
 }
+/*
 #footer .contact input[type="submit"]:hover {
 	background-color:#2190DB;
 }
+*/
 #footer .credits {
 	border-top: 1px solid #343437;
 	padding: 10px 0px 60px 0px;

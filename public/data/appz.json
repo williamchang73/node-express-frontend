@@ -3,7 +3,8 @@
 		"company_info" : {
 			"name" : "APPz 艾普斯數位",
 			"slogan" : "APPz 協助品牌打造功能強大的專屬 iPhone，iPad，與 Android App。 APPz 所提供的開發工具也是目前市場上功能最強大的 APP 編輯平台，使用者無需要具備撰寫程式碼的知識，只要透過非常直覺的操作與設定，就能製作一個品牌客制化的專屬應用程式。",
-			"logopic" : ""
+			"logopic" : "",
+			"theme" : "blue"			
 		},
 		"company_pic" : {
 			"0" : {
