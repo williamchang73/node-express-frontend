@@ -32,6 +32,7 @@ companyController.getCompanyData = function() {
 			companyController.setJobs(data.job, data.joy_apply_url);
 			companyController.setNews(data.latest_news);
 			companyController.setContact(data.contact_info);
+			companyController.setColorTheme('#4A036F');
         },                 
         error : function(data) {
             console.error(data.error_message);
@@ -205,6 +206,7 @@ companyController.clickServicesCircle = function() {
         $texts.eq(index).fadeIn();
         $circles.removeClass("active");
         $(this).addClass("active");
+        $(this).css('background', '#4A036F');
 	});
 }
 
@@ -271,6 +273,23 @@ companyController.setContact = function(data) {
 	$footer.find('.author').find('.info').text(data.title);
 	$footer.find('.author').find('.name').text(data.name);
 	$footer.find('.author').find('img').attr('src', data.pic+'/convert?w=62&h=62&fit=crop');
+}
+
+
+//set up color theme
+companyController.setColorTheme = function(color) {
+	$('#team').css( 'background', color );
+	$('.circle.active').css( 'background', color );
+	$('.circle').hover(
+    		function(){$(this).css({color:color});}
+    		/*
+    function(){
+         $(this).css({color:'black'}); // mouseout
+         */
+    
+	);
+	
+	//$('.circle:hover').css( 'background', color );
 }
 
 

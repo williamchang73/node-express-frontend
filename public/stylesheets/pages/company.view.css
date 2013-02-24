@@ -705,13 +705,11 @@
 }
 #team .people .bio_box .info p.name{
 	color: #fff;
-	font-style: italic;
 	margin-bottom: 4px;
 	font-size: 21px;
 }
 #team .people .bio_box .info p.area{
 	color: #98989A;
-	font-style: italic;
 	font-style: 16px;
 	width: 230px;
 	margin-left: auto;

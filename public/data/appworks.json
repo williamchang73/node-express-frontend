@@ -158,28 +158,28 @@
 		"joy_apply_url" : "http://appworks.tw/jobs/",
 		"latest_news" : {
 			"0" : {
-				"date" : "2012",
+				"date" : "11/26/2012",
 				"pic" : "https://www.filepicker.io/api/file/ZcSoNIZSTaOT0y7CLsNQ",
 				"title" : "第六屆 appWorks 育成計畫",
-				"desc"	: "第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫",
+				"desc"	: "申請收件期間：現在起至 2012 年 11 月 26 日 11:59pm 止 (Taipei Time)，面談期間：至 2012 年 12 月 21 日 (個別通知)，公布入選團隊：2012 年 12 月 31 日前 (個別通知)。",
 				"url" : "http://appworks.tw/incubator/",
-				"source" : "蘋果日報"
+				"source" : "appWorks 官方網站"
 			},
 			"1" : {
-				"date" : "三月，2013",
-				"pic" : "https://www.filepicker.io/api/file/ZcSoNIZSTaOT0y7CLsNQ",
+				"date" : "3/12/2013",
+				"pic" : "https://www.filepicker.io/api/file/Bq9ENGvT92V4MFNsAiKh",
 				"title" : "第七屆 appWorks 育成計畫",
-				"desc"	: "第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫",
+				"desc"	: "第七屆 appWorks 育成計畫將於 2013 年 3 月開放申請，希望到時候收到通知，可以留下聯絡方式。",
 				"url" : "http://appworks.tw/incubator/",
-				"source" : "蘋果日報"
+				"source" : "appWorks 官方網站"
 			},
 			"2" : {
-				"date" : "三月，2013",
-				"pic" : "https://www.filepicker.io/api/file/ZcSoNIZSTaOT0y7CLsNQ",
-				"title" : "第七屆 appWorks 育成計畫",
-				"desc"	: "第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫第六屆 appWorks 育成計畫",
-				"url" : "http://appworks.tw/incubator/",
-				"source" : "蘋果日報"
+				"date" : "1/18/2013",
+				"pic" : "https://www.filepicker.io/api/file/dh8UB4ppT0SCGTUkSnvd",
+				"title" : "Android App 有錢買不到",
+				"desc"	: "appWORKS之初創投管理顧問公司合夥人林之晨表示，台灣約有三成民眾願意付費下載，但Android系統使用者卻受政府箝制而無法付費下載。他憂心我國在App市場坐以待斃的同時，相較鄰國日本的APP已經要發展1千億的市場，對台灣未來是個很大的挑戰。他呼籲政府重視這調查顯示的警訊。",
+				"url" : "http://tw.news.yahoo.com/android-app-有錢買不到-213000677--finance.html",
+				"source" : "中時電子報"
 			}
 		},
 		"contact_info" :{

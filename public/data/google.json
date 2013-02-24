@@ -158,28 +158,28 @@
 		"joy_apply_url" : "http://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=4c4a4328446c3e2552583a1d1d1d1d5f2443a363189j99&jobsource=cj2008",
 		"latest_news" : {
 			"0" : {
-				"date" : "4/26/2012",
-				"pic" : "https://www.filepicker.io/api/file/BklXKL4lSOOdUOFMtVpf",
-				"title" : "Google 2012 合作夥伴日",
-				"desc"	: "",
-				"url" : "",
-				"source" : "蘋果日報"
+				"date" : "2/12/2013",
+				"pic" : "https://www.filepicker.io/api/file/tO9JWICyQ46lqb4AmIga",
+				"title" : "Google Play 部分開放付費機制",
+				"desc"	: "針對Google Play在台付費App的7天猶豫期爭議，台北市政府後續放棄上之後，目前 Google 逐步針對部份使用者重新開放付費App機制，同時先前已經在國外地區上線的音樂、影片等內容也均可於線上付費購買。",
+				"url" : "https://play.google.com/store",
+				"source" : "Google Play"
 			},
 			"1" : {
-				"date" : "6/16/2012",
-				"pic" : "https://www.filepicker.io/api/file/HVZYR0qGQnOqyFJiLBvx",
-				"title" : "Google 台灣分公司員工旅遊",
-				"desc"	: "",
-				"url" : "",
-				"source" : "蘋果日報"
+				"date" : "2/6/2013",
+				"pic" : "https://www.filepicker.io/api/file/diNZqdHNTROfmW1y22K2",
+				"title" : "谷歌手機 可當旅遊秘書",
+				"desc"	: "Google台灣分公司解釋， Google Now 整合所有最受歡迎的服務，呈現在同一頁面，像是Google Maps、日曆、搜尋、翻譯等；且都用一張張清楚易懂的卡片呈現，使用者不需要在不同的App及頁面間切換，只要照卡片順序照表操課，就能輕鬆獲得資訊、解決問題。",
+				"url" : "http://www.google.com/landing/now/",
+				"source" : "Google Now"
 			},
 			"2" : {
-				"date" : "6/16/2012",
-				"pic" : "https://www.filepicker.io/api/file/HVZYR0qGQnOqyFJiLBvx",
-				"title" : "Google 台灣分公司員工旅遊",
-				"desc"	: "",
-				"url" : "",
-				"source" : "蘋果日報"
+				"date" : "2/2/2013",
+				"pic" : "https://www.filepicker.io/api/file/v8bbgTPkQ62uSK2voujZ",
+				"title" : "Google看台灣：青年大有可為",
+				"desc"	: "谷歌（Google）台灣董事總經理簡立峰說，台灣社會近期似乎過度沒信心，全球的資訊產業都在「典範轉移」，但不要因為我們的資優生─硬體產業遇到了挫折，就覺得它沒有未來，其實只是成長平緩。硬體仍然是台灣最有優勢的地方，不要誤判。",
+				"url" : "http://mag.udn.com/mag/newsstand/storypage.jsp?f_ART_ID=439107",
+				"source" : "聯合新聞網"
 			}
 		},
 		"contact_info" :{
