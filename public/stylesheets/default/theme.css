@@ -57,6 +57,8 @@ header {
 }
 .navbar-inverse .brand {
     color: #fff;
+    font-size: 18px;
+    font-weight: bold;
 }
 .navbar-inverse .nav > li > a {
     /*color: rgb(177, 177, 177);*/

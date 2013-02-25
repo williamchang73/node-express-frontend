@@ -48,11 +48,7 @@ companyController.getCompanyData = function() {
 
 //set up event
 companyController.setCompanyInfo = function(data) {
-	var displaymode = '';
-	if(global_mode == 'edit'){
-		displaymode = '- edit';
-	}
-	$('.brand strong').text('Inside - ' + data.name + displaymode);
+	$('.brand').text(data.name);
 	$('#slogan h3 p').text(data.slogan);
 	companyController.setGlobalThemeColor(data.theme);
 	console.log('finished company info');		
@@ -87,7 +83,7 @@ companyController.setWorkingSpaces = function(data) {
 	var $workspace = $('#workspace').remove().clone();
 	var startIndex = 4;
 	$.each( data, function(i, picinfo) {
-		if(i>startIndex-1){
+		if(i>startIndex-1 || global_mode == 'edit'){
 	        var $eachPicinfo = $workspace.clone();
 	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop')
 	        .end()
@@ -755,4 +751,14 @@ companyController.makeEditable = function() {
 	$("h6").attr('contenteditable','true');
 	$(".quote").attr('contenteditable','true');
 	$(".qty").attr('contenteditable','true');
+	$('.brand').attr('contenteditable','true');
+	
+	$('#feature_slider').after("<br /><br /><br /><br />");
+	$('#feature_slider').hide();
+	$('span .plus i').removeClass('icon-resize-full icon-white').addClass('icon-camera icon-white');
+	
+	//change to camera
+	//<i class="icon-camera icon-white"></i>
+	//icon-resize-full
+	
 }
