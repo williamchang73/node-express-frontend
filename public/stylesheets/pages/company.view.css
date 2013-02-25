@@ -220,7 +220,7 @@
     margin-right: 0;
 }
 #showcase .features_op1_row .feature .text{
-    margin: 32px auto 0;
+    margin: 32px auto 20px;
     width: 87%;
 }
 #showcase .features_op1_row .feature .text h6{
@@ -283,7 +283,7 @@
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 65px;
 }
-#features .feature .info h3 {
+#features .feature .info h6{
     font-size: 21px;
     margin-top: 35px;
 }
@@ -329,7 +329,7 @@
 #in_pricing .plan .wrapper{
     padding: 33px 30px 26px 30px;
 }
-#in_pricing .plan h3{
+#in_pricing .plan h6{
     color: rgb(83, 83, 83);
     font-weight: normal;
     font-style: italic;

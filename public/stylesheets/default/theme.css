@@ -175,12 +175,11 @@ header {
 	position: relative;
 	top: -6px;
 }
-#footer .testimonials .name {
+#footer .testimonials .name p{
 	font-size: 13px;
 	font-weight: bold;
 }
-#footer .testimonials .info {
-	font-style: italic;
+#footer .testimonials .info p{
 	color: #ccc;
 }
 

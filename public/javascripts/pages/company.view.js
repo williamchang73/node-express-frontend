@@ -11,10 +11,16 @@ companyController.init = function() {
 
 companyController.initWidget = function() {
 	companyController.getCompanyData();
+	if(global_mode == 'edit'){
+		companyController.makeEditable(); 		
+	}
+	
 }
 
 companyController.initBinding = function() {
 }
+
+
 
 companyController.getCompanyData = function() {
     var that = this;
@@ -22,7 +28,7 @@ companyController.getCompanyData = function() {
         url :"/data/"+global_company_name+".json",       
         data : {},
         type : 'GET',
-        async : false,
+        async : 'false',
         success : function(data) {
 			companyController.setCompanyInfo(data.company_info);
 			companyController.setWorkingSpaces(data.company_pic);
@@ -48,13 +54,13 @@ companyController.setCompanyInfo = function(data) {
 	}
 	$('.brand strong').text('Inside - ' + data.name + displaymode);
 	$('#slogan h3 p').text(data.slogan);
-	companyController.setGlobalThemeColor(data.theme);		
+	companyController.setGlobalThemeColor(data.theme);
+	console.log('finished company info');		
 }
 
 
 //set up themes
 companyController.setGlobalThemeColor = function(color) {
-	console.log(color);
 	if(color == 'purple'){
 		console.log('yes');
 		global_theme_color = '#4A036F';
@@ -154,7 +160,7 @@ companyController.setEvent = function(data) {
 		var $eachEvent = $eventCell.clone();
 		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop')
 		.end()
-		.find("h3").text(event.title)
+		.find("h6").text(event.title)
 		.end()
 		.find("p").text(event.desc)
 		.end();
@@ -246,7 +252,7 @@ companyController.setJobs = function(data, applyURL) {
 	var $jobCell = $('#job').children().remove().clone();
 	$.each( data, function(i, job) {
 		var $eachJob = $jobCell.clone();
-		$eachJob.find("h3").text(job.title)
+		$eachJob.find("h6").text(job.title)
 		.end()
 		.find(".qty").text(job.pay)
 		.end();
@@ -298,8 +304,8 @@ companyController.setContact = function(data) {
 	$footer.find('#contact_phone').text(data.phone);
 	$footer.find('#contact_email').attr('value', data.email);
 	$footer.find('#contact_facebook').attr('href', data.facebook);
-	$footer.find('.author').find('.info').text(data.title);
-	$footer.find('.author').find('.name').text(data.name);
+	$footer.find('.author').find('.info p').text(data.title);
+	$footer.find('.author').find('.name p').text(data.name);
 	$footer.find('.author').find('img').attr('src', data.pic+'/convert?w=62&h=62&fit=crop');
 }
 
@@ -732,4 +738,21 @@ var photoGallery = function(data) {
 			social_tools : false,
 			overlay_gallery : false
 	});
+}
+
+
+
+
+
+
+
+
+
+//edit part
+companyController.makeEditable = function() {
+	console.log('make content editable');
+	$("p").attr('contenteditable','true');
+	$("h6").attr('contenteditable','true');
+	$(".quote").attr('contenteditable','true');
+	$(".qty").attr('contenteditable','true');
 }
