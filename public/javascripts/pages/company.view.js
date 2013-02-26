@@ -18,6 +18,7 @@ companyController.initWidget = function() {
 }
 
 companyController.initBinding = function() {
+	companyController.handleImage();
 }
 
 
@@ -51,14 +52,12 @@ companyController.setCompanyInfo = function(data) {
 	$('.brand').text(data.name);
 	$('#slogan h3 p').text(data.slogan);
 	companyController.setGlobalThemeColor(data.theme);
-	console.log('finished company info');		
 }
 
 
 //set up themes
 companyController.setGlobalThemeColor = function(color) {
 	if(color == 'purple'){
-		console.log('yes');
 		global_theme_color = '#4A036F';
 	}else if(color == 'red'){
 		global_theme_color = '#550000';
@@ -85,13 +84,11 @@ companyController.setWorkingSpaces = function(data) {
 	$.each( data, function(i, picinfo) {
 		if(i>startIndex-1 || global_mode == 'edit'){
 	        var $eachPicinfo = $workspace.clone();
-	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop')
+	        $eachPicinfo.attr('id', $eachPicinfo.attr('id')+'_'+i);
+	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop').attr("alt", picinfo.title)
 	        .end()
 	        .find('.text h6')
 	        .text(picinfo.title)
-	        .end()
-	        .find('a')
-	        .attr('id', 'workspace_'+i)
 	        .end()
 	        .find('.text p')
 	        .text(picinfo.desc)
@@ -110,42 +107,9 @@ companyController.setWorkingSpaces = function(data) {
     
     $workspace = null;
     //because this is slider need to preload first
-    coverslide();
-
-    if(global_mode == 'edit'){
-    	//for uploading the photos
-		$('.uploadpic').on('click', function(e) {
-			//using filepicker.io
-	        filepicker.pick({
-			    mimetypes: ['image/*', 'text/plain'],
-			    container: 'window',
-			    services:['COMPUTER','URL','FACEBOOK','FLICKR','PICASA'],
-			    openTo: 'COMPUTER',
-			    maxSize: 3000*1024, //3 MB
-			    multiple: 'true'
-			  },
-			  function(FPFile){
-			    console.log(JSON.stringify(FPFile));
-			  },
-			  function(FPError){
-			    console.log(FPError.toString());
-			  }
-			);
-	    });
-    }else{ //for viewing
-    	$('.uploadpic').on('click', function() {
-    		var photoid = $(this).attr("id");
-    		$('#'+photoid.replace('workspace_', 'gallery_photo_')).click();
-	    });
-    	
-    	var photos = [];
-    	$.each( data, function(i, picinfo) {
-			photos.push( '<li><a id="gallery_photo_'+i+'" href="'+picinfo.pic+'" rel="prettyPhoto[workspace]" title="'+picinfo.title+'">-</a></li>' );
-		});
-		var gallery = '<ul class="gallery clearfix hide">' + photos.join('') + '</ul>';
-		$('#showcase').append(gallery);
-		photoGallery();
-    }
+    if(global_mode != 'edit'){
+    	coverslide();
+    }	
 }
 
 
@@ -154,7 +118,8 @@ companyController.setEvent = function(data) {
 	var $eventCell = $('#event').remove().clone();
 	$.each( data, function(i, event) {
 		var $eachEvent = $eventCell.clone();
-		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop')
+		$eachEvent.attr('id', $eachEvent.attr('id')+'_'+i); 
+		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop').attr('alt', event.title)
 		.end()
 		.find("h6").text(event.title)
 		.end()
@@ -170,6 +135,7 @@ companyController.setEvent = function(data) {
 		$('#features .container').append( $eachEvent );
     });
     $eventCell = null;
+    
 }
 
 
@@ -178,6 +144,7 @@ companyController.setPeople = function(data) {
 	var $peopleCell = $('#people_cell').remove().clone();
 	$.each( data, function(i, person) {
 		var $eachPerson = $peopleCell.clone();
+		$eachPerson.attr('id', $eachPerson.attr('id')+'_'+i);
 		$eachPerson.find("img").attr("src", person.headpic+'/convert?w=171&h=171&fit=crop')
 		.end()
 		.find(".name").text(person.name)
@@ -245,10 +212,13 @@ companyController.clickServicesCircle = function() {
 
 //set up job
 companyController.setJobs = function(data, applyURL) {
-	var $jobCell = $('#job').children().remove().clone();
+	var $jobCell = $('#job').remove().clone();
 	$.each( data, function(i, job) {
 		var $eachJob = $jobCell.clone();
+		$eachJob.attr('id', $eachJob.attr('id')+'_'+i);
 		$eachJob.find("h6").text(job.title)
+		.end()
+		.find(".order").attr("href", applyURL)
 		.end()
 		.find(".qty").text(job.pay)
 		.end();
@@ -259,21 +229,20 @@ companyController.setJobs = function(data, applyURL) {
 			.end();
 			$eachJob.find(".features").append( $eachJobDesc );
 		});
-		$('#job').append( $eachJob );
+		$('#job_block').append( $eachJob );
     });
-	$('#job').find('.order').attr("href", applyURL);
-	$('#job').parent().find('.start a').attr("href", applyURL);
-    //release memory
+	$('#job_block').parent().find('.start a').attr("href", applyURL);
 	$jobCell = null;
 }
 
 
 //set up latest news
 companyController.setNews = function(data) {
-	var $newsCell = $('#news').find(".span4").remove().clone();
+	var $newsCell = $('#news').remove().clone();
 	
 	$.each( data, function(i, news) {
 		var $eachNews = $newsCell.clone();
+		$eachNews.attr('id', $eachNews.attr('id')+'_'+i);
 		if(i==2){ //last
 			$eachNews.addClass("last");
 		}
@@ -287,7 +256,7 @@ companyController.setNews = function(data) {
 		.end()
 		.find("p").text(news.desc)
 		.end();
-		$('#news').append( $eachNews );
+		$('#news_block').append( $eachNews );
     });
 	$newsCell = null;
 }
@@ -313,6 +282,8 @@ companyController.setColorTheme = function() {
 	$('.dollar').css( 'color', global_theme_color );
 	$('.qty').css( 'color', global_theme_color );
 	$('.month').css( 'color', global_theme_color );
+	$('#feature_slider').css( 'background', global_theme_color );
+	
 	$('.order').css( 'background-color', global_theme_color );
 	$('.order').mouseover(function() {
 		$(this).css( 'background', '#333333' );
@@ -724,7 +695,7 @@ var coverslide = function(data) {
 
 //set up photo gallery
 var photoGallery = function(data) {
-	$(".gallery a[rel^='prettyPhoto']").prettyPhoto(
+	$(".gallery a[rel^='fullsize']").prettyPhoto(
 		{
 			animation_speed:'normal',
 			theme:'light_square',
@@ -739,7 +710,54 @@ var photoGallery = function(data) {
 
 
 
-
+//image part
+companyController.getFilePickerOriginalURL = function(url) {
+	return url.substr(0, url.indexOf("/convert"));
+}
+companyController.handleImage = function() {
+	
+	if(global_mode == 'edit'){
+    	//for uploading the photos
+		$('.uploadpic').on('click', function(e) {
+			//using filepicker.io
+	        filepicker.pick({
+			    mimetypes: ['image/*', 'text/plain'],
+			    container: 'window',
+			    services:['COMPUTER','URL','FACEBOOK','FLICKR','PICASA'],
+			    openTo: 'COMPUTER',
+			    maxSize: 3000*1024, //3 MB
+			    multiple: 'true'
+			  },
+			  function(FPFile){
+			    console.log(JSON.stringify(FPFile));
+			  },
+			  function(FPError){
+			    console.log(FPError.toString());
+			  }
+			);
+	    });
+    }else{ //for viewing
+    	$('.uploadpic').on('click', function() {
+    		var imgSrc = $(this).find('img').attr("src");
+    		imgSrc = companyController.getFilePickerOriginalURL(imgSrc);
+    		$('.gallery li a[href$="'+imgSrc+'"]').click();
+	    });
+	    
+	    var photos = [];
+	    var i = 4;
+	    $('.uploadpic').each(function(){
+  			var imgSrc = $(this).find('img').attr('src');
+  			imgSrc = companyController.getFilePickerOriginalURL(imgSrc);
+  			var text = $(this).find('img').attr('alt');
+  			photos.push( '<li><a href="'+imgSrc+'" rel="fullsize[imgs]" title="'+text+'">-</a></li>' );
+  			i++;
+		});
+		var gallery = '<ul class="gallery clearfix hide">' + photos.join('') + '</ul>';
+	    $('#footer').append(gallery);
+		photoGallery();
+    }
+	
+}
 
 
 
@@ -756,9 +774,5 @@ companyController.makeEditable = function() {
 	$('#feature_slider').after("<br /><br /><br /><br />");
 	$('#feature_slider').hide();
 	$('span .plus i').removeClass('icon-resize-full icon-white').addClass('icon-camera icon-white');
-	
-	//change to camera
-	//<i class="icon-camera icon-white"></i>
-	//icon-resize-full
 	
 }
