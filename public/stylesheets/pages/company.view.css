@@ -736,7 +736,8 @@
 	display: none !important;
 }
 #process{
-	min-height: 350px;
+	min-height: 420px;
+	
 }
 #process .section_header{
 	margin-bottom: 60px;

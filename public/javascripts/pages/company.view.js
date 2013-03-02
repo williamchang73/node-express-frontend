@@ -49,8 +49,8 @@ companyController.getCompanyData = function() {
 
 //set up event
 companyController.setCompanyInfo = function(data) {
-	$('.brand').text(data.name);
-	$('#slogan h3 p').text(data.slogan);
+	$('.brand').text(data.name).attr('id', 'company_info-name');
+	$('#slogan h3 p').text(data.slogan).attr('id', 'company_info-slogan');
 	companyController.setGlobalThemeColor(data.theme);
 }
 
@@ -88,10 +88,10 @@ companyController.setWorkingSpaces = function(data) {
 	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop').attr("alt", picinfo.title)
 	        .end()
 	        .find('.text h6')
-	        .text(picinfo.title)
+	        .text(picinfo.title).attr('id', 'company_pic-'+i+'-title')
 	        .end()
 	        .find('.text p')
-	        .text(picinfo.desc)
+	        .text(picinfo.desc).attr('id', 'company_pic-'+i+'-desc')
 	        .end();
 	        $('.features_op1_row').append( $eachPicinfo );
 		}else{
@@ -121,9 +121,9 @@ companyController.setEvent = function(data) {
 		$eachEvent.attr('id', $eachEvent.attr('id')+'_'+i); 
 		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop').attr('alt', event.title)
 		.end()
-		.find("h6").text(event.title)
+		.find("h6").text(event.title).attr('id', 'events-'+i+'-title')
 		.end()
-		.find("p").text(event.desc)
+		.find("p").text(event.desc).attr('id', 'events-'+i+'-desc')
 		.end();
 		
 		if(i == 1 ){ //second needs to change order
@@ -147,11 +147,11 @@ companyController.setPeople = function(data) {
 		$eachPerson.attr('id', $eachPerson.attr('id')+'_'+i);
 		$eachPerson.find("img").attr("src", person.headpic+'/convert?w=171&h=171&fit=crop')
 		.end()
-		.find(".name").text(person.name)
+		.find(".name").text(person.name).attr('id', 'people-'+i+'-name')
 		.end()
-		.find("#people_title").text(person.title)
+		.find("#people_title").text(person.title).attr('id', 'people-'+i+'-title')
 		.end()
-		.find("#people_quote").text(person.quote)
+		.find("#people_quote").text(person.quote).attr('id', 'people-'+i+'-quote')
 		.end()
 		.find(".facebook").attr("href", person.facebook)
 		.end();
@@ -175,9 +175,9 @@ companyController.setCoreValue = function(data) {
 			$eachCoreTitle.css('background', global_theme_color);
 		}
 		
-		$eachCore.find("h4").text(core.title)
+		$eachCore.find("h4").text(core.title).attr('id', 'core_value-'+i+'-title')
 		.end()
-		.find("p").text(core.desc)
+		.find("p").text(core.desc).attr('id', 'core_value-'+i+'-desc')
 		.end();
 		$('#core').append( $eachCore );
 		$eachCoreTitle.find("span").text(core.core)
@@ -216,16 +216,16 @@ companyController.setJobs = function(data, applyURL) {
 	$.each( data, function(i, job) {
 		var $eachJob = $jobCell.clone();
 		$eachJob.attr('id', $eachJob.attr('id')+'_'+i);
-		$eachJob.find("h6").text(job.title)
+		$eachJob.find("h6").text(job.title).attr('id', 'job-'+i+'-title')
 		.end()
 		.find(".order").attr("href", applyURL)
 		.end()
-		.find(".qty").text(job.pay)
+		.find(".qty").text(job.pay).attr('id', 'job-'+i+'-pay')
 		.end();
 		var $jobDesc = $eachJob.find(".features").children().remove().clone();
 		$.each( job.details, function(j, desc) {
 			var $eachJobDesc = $jobDesc.clone();
-			$eachJobDesc.text(desc)
+			$eachJobDesc.text(desc).attr('id', 'job-'+i+'-details-'+j)
 			.end();
 			$eachJob.find(".features").append( $eachJobDesc );
 		});
@@ -246,15 +246,15 @@ companyController.setNews = function(data) {
 		if(i==2){ //last
 			$eachNews.addClass("last");
 		}
-		$eachNews.find("a").attr('href', news.url)
+		$eachNews.find(".title").text(news.title).attr('id', 'latest_news-'+i+'-title')
 		.end()
-		.find(".date").text(news.date)
+		.find(".date").text(news.date).attr('id', 'latest_news-'+i+'-date')
 		.end()
-		.find("h6").text(news.source)
+		.find("h6").text(news.source).attr('id', 'latest_news-'+i+'-source')
 		.end()
 		.find("img").attr('src', news.pic+'/convert?w=300&h=189&fit=crop')
 		.end()
-		.find("p").text(news.desc)
+		.find("p").text(news.desc).attr('id', 'latest_news-'+i+'-desc')
 		.end();
 		$('#news_block').append( $eachNews );
     });
@@ -767,6 +767,9 @@ companyController.makeEditable = function() {
 	console.log('make content editable');
 	$("p").attr('contenteditable','true');
 	$("h6").attr('contenteditable','true');
+	$("h4").attr('contenteditable','true');
+	$(".title").attr('contenteditable','true');
+	$(".date").attr('contenteditable','true');
 	$(".quote").attr('contenteditable','true');
 	$(".qty").attr('contenteditable','true');
 	$('.brand').attr('contenteditable','true');
@@ -774,5 +777,19 @@ companyController.makeEditable = function() {
 	$('#feature_slider').after("<br /><br /><br /><br />");
 	$('#feature_slider').hide();
 	$('span .plus i').removeClass('icon-resize-full icon-white').addClass('icon-camera icon-white');
+	
+	var contentEditables = $('[contenteditable]'); //.html();
+	console.log(contentEditables);
+	$('[contenteditable]').blur(function() {
+    	companyController.saveToArray($(this).attr('id'), $(this).text());
+	});
+}
+
+
+
+companyController.saveToArray = function(id, value) {
+	if(id != undefined && value != "" ){
+		console.log('changing the id : ' + id + ' with value : ' + value);
+	}
 	
 }
