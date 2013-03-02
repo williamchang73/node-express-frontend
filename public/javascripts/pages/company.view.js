@@ -150,7 +150,7 @@ companyController.setPeople = function(data) {
 	$.each( data, function(i, person) {
 		var $eachPerson = $peopleCell.clone();
 		$eachPerson.attr('id', $eachPerson.attr('id')+'_'+i);
-		$eachPerson.find("img").attr("src", person.headpic+'/convert?w=171&h=171&fit=crop')
+		$eachPerson.find("img").attr("src", person.headpic+'/convert?w=171&h=171&fit=crop').attr('id', 'people-'+i+'-headpic')
 		.end()
 		.find(".name").text(person.name).attr('id', 'people-'+i+'-name')
 		.end()
@@ -257,7 +257,7 @@ companyController.setNews = function(data) {
 		.end()
 		.find("h6").text(news.source).attr('id', 'latest_news-'+i+'-source')
 		.end()
-		.find("img").attr('src', news.pic+'/convert?w=300&h=189&fit=crop')
+		.find("img").attr('src', news.pic+'/convert?w=300&h=189&fit=crop').attr('id', 'latest_news-'+i+'-pic')
 		.end()
 		.find("p").text(news.desc).attr('id', 'latest_news-'+i+'-desc')
 		.end();
@@ -723,9 +723,8 @@ companyController.handleImage = function() {
 	
 	if(global_mode == 'edit'){
     	//for uploading the photos
-		$('.uploadpic').on('click', function(e) {
-			
-			var $a = $(this);
+		$('.uploadpic img, .headpic, .newspic').on('click', function(e) {
+			var $img = $(this);
 			
 	        filepicker.pick({
 				mimetypes: ['image/*', 'text/plain'],
@@ -737,11 +736,11 @@ companyController.handleImage = function() {
 			},
 			function(FPFile){
 				var url = FPFile.url;
-				var beforeURL = $a.find('img').attr('src');
+				
+				var beforeURL = $img.attr('src');
 				var beforeOriginalURL = companyController.getFilePickerOriginalURL(beforeURL);
 				var afterURL = beforeURL.replace(beforeOriginalURL, url);
 				//change image
-				var $img = $a.find('img'); //.attr('src', afterURL);
 				$img.attr('src', afterURL);
 			  	companyController.saveToArray($img.attr('id'), url);
 			},
@@ -778,14 +777,8 @@ companyController.handleImage = function() {
 //edit part
 companyController.makeEditable = function() {
 	console.log('make content editable');
-	$("p").attr('contenteditable','true');
-	$("h6").attr('contenteditable','true');
-	$("h4").attr('contenteditable','true');
-	$(".title").attr('contenteditable','true');
-	$(".date").attr('contenteditable','true');
-	$(".quote").attr('contenteditable','true');
-	$(".qty").attr('contenteditable','true');
-	$('.brand').attr('contenteditable','true');
+	$("p, h6, h4, .title, .date, .quote, .qty, .brand").attr('contenteditable','true');
+	$(".morejobs").attr('contenteditable','false');
 	
 	$('#feature_slider').after("<br /><br /><br /><br />");
 	$('#feature_slider').hide();
