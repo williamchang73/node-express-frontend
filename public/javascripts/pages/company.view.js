@@ -52,7 +52,7 @@ companyController.getCompanyData = function() {
 	});
 };
 
-//set up event
+//set up company information
 companyController.setCompanyInfo = function(data) {
 	$('.brand').text(data.name).attr('id', 'company_info-name');
 	$('#slogan h3 p').text(data.slogan).attr('id', 'company_info-slogan');
@@ -124,7 +124,7 @@ companyController.setEvent = function(data) {
 	$.each( data, function(i, event) {
 		var $eachEvent = $eventCell.clone();
 		$eachEvent.attr('id', $eachEvent.attr('id')+'_'+i); 
-		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop').attr('alt', event.title)
+		$eachEvent.find("img").attr("src", event.pic+'/convert?w=460&h=345&fit=crop').attr('alt', event.title).attr('id', 'events-'+i+'-pic')
 		.end()
 		.find("h6").text(event.title).attr('id', 'events-'+i+'-title')
 		.end()
@@ -743,7 +743,7 @@ companyController.handleImage = function() {
 				//change image
 				var $img = $a.find('img'); //.attr('src', afterURL);
 				$img.attr('src', afterURL);
-			  	console.log($img.attr('id'));
+			  	companyController.saveToArray($img.attr('id'), url);
 			},
 			function(FPError){
 				console.log(FPError.toString());
