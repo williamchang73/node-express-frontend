@@ -3,17 +3,14 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , index = require('./routes/index')
-  , admin = require('./routes/admin')
-  , company = require('./routes/company')
   , http = require('http')
   , fs = require('fs')
   , path = require('path')
   , Log = require('log')
   , log = new Log('info', fs.createWriteStream('./log/abous.log')
-  ,	engine = require('ejs-locals')
-  );
+  ,	engine = require('ejs-locals')  
+  
+);
 
   
 var app = express();
@@ -41,6 +38,20 @@ app.configure('development', function(){
 });
 
 
+
+
+
+
+
+
+//for routing --------------------
+var routes = require('./routes')
+  , index = require('./routes/index')
+  , admin = require('./routes/admin')
+  , company = require('./routes/company')
+  , api_company = require('./routes/api/company.api')
+
+
 app.get('/', index.index); //to do need a index file
 app.get('/company', company.index);
 app.get('/company/:id', company.index);
@@ -52,6 +63,11 @@ app.get('/company/:id/edit', company.edit);
 app.get('/admin/uploadphotos', admin.uploadphotos);
 app.get('/admin/uploaddata', admin.uploaddata);
 app.post('/admin/uploaddata', admin.uploaddata);
+
+
+//api
+app.post('/api/update_company', api_company.update);
+app.post('/api/get_company', api_company.get);
 
 
 

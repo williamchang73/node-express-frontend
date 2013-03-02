@@ -3,15 +3,18 @@
  * and open the template in the editor.
  */
 var companyController = new SWSController;
+var companydata = '';
+
+
 companyController.init = function() {
-	//filepicker
-	filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
 	
 }
 
 companyController.initWidget = function() {
 	companyController.getCompanyData();
 	if(global_mode == 'edit'){
+		//filepicker
+		filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
 		companyController.makeEditable(); 		
 	}
 	
@@ -26,11 +29,13 @@ companyController.initBinding = function() {
 companyController.getCompanyData = function() {
     var that = this;
     SWSUtility.ajax({    
-        url :"/data/"+global_company_name+".json",       
-        data : {},
-        type : 'GET',
+        url :"/api/get_company",       
+        data : {
+        	id : global_company_name
+        },
         async : 'false',
         success : function(data) {
+        	that.companydata = data;
 			companyController.setCompanyInfo(data.company_info);
 			companyController.setWorkingSpaces(data.company_pic);
 			companyController.setEvent(data.events);
@@ -85,7 +90,7 @@ companyController.setWorkingSpaces = function(data) {
 		if(i>startIndex-1 || global_mode == 'edit'){
 	        var $eachPicinfo = $workspace.clone();
 	        $eachPicinfo.attr('id', $eachPicinfo.attr('id')+'_'+i);
-	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop').attr("alt", picinfo.title)
+	        $eachPicinfo.find("img").attr("src", picinfo.pic+'/convert?w=285&h=215&fit=crop').attr("alt", picinfo.title).attr('id', 'company_pic-'+i+'-pic')
 	        .end()
 	        .find('.text h6')
 	        .text(picinfo.title).attr('id', 'company_pic-'+i+'-title')
@@ -719,22 +724,30 @@ companyController.handleImage = function() {
 	if(global_mode == 'edit'){
     	//for uploading the photos
 		$('.uploadpic').on('click', function(e) {
-			//using filepicker.io
+			
+			var $a = $(this);
+			
 	        filepicker.pick({
-			    mimetypes: ['image/*', 'text/plain'],
+				mimetypes: ['image/*', 'text/plain'],
 			    container: 'window',
 			    services:['COMPUTER','URL','FACEBOOK','FLICKR','PICASA'],
 			    openTo: 'COMPUTER',
 			    maxSize: 3000*1024, //3 MB
 			    multiple: 'true'
-			  },
-			  function(FPFile){
-			    console.log(JSON.stringify(FPFile));
-			  },
-			  function(FPError){
-			    console.log(FPError.toString());
-			  }
-			);
+			},
+			function(FPFile){
+				var url = FPFile.url;
+				var beforeURL = $a.find('img').attr('src');
+				var beforeOriginalURL = companyController.getFilePickerOriginalURL(beforeURL);
+				var afterURL = beforeURL.replace(beforeOriginalURL, url);
+				//change image
+				var $img = $a.find('img'); //.attr('src', afterURL);
+				$img.attr('src', afterURL);
+			  	console.log($img.attr('id'));
+			},
+			function(FPError){
+				console.log(FPError.toString());
+			});
 	    });
     }else{ //for viewing
     	$('.uploadpic').on('click', function() {
@@ -779,7 +792,6 @@ companyController.makeEditable = function() {
 	$('span .plus i').removeClass('icon-resize-full icon-white').addClass('icon-camera icon-white');
 	
 	var contentEditables = $('[contenteditable]'); //.html();
-	console.log(contentEditables);
 	$('[contenteditable]').blur(function() {
     	companyController.saveToArray($(this).attr('id'), $(this).text());
 	});
@@ -790,6 +802,41 @@ companyController.makeEditable = function() {
 companyController.saveToArray = function(id, value) {
 	if(id != undefined && value != "" ){
 		console.log('changing the id : ' + id + ' with value : ' + value);
+		//get key structure
+		var keys = id.split('-');
+		var beforeValue = companyController.companydata;
+		for(var i in keys){ 
+			var key = keys[i];
+			beforeValue = beforeValue[key];
+		}
+		
+		if(beforeValue!=value){
+			console.log('need to save to array');
+			if(keys.length==2){
+				companyController.companydata[keys[0]][keys[1]] = value;
+			}else if(keys.length==3){
+				companyController.companydata[keys[0]][keys[1]][keys[2]] = value;
+			}else if(keys.length==4){
+				companyController.companydata[keys[0]][keys[1]][keys[2]][keys[3]] = value;
+			}
+			//save back to server
+			
+			SWSUtility.ajax({    
+		        url :"/api/update_company",       
+		        data : {
+		        	id : global_company_name,
+		        	data : JSON.stringify(companyController.companydata)
+		        },
+		        success : function(data) {
+		        	console.log(data);
+		        },                 
+		        error : function(data) {
+		            console.error(data.error_message);
+		        }
+			});
+			
+			
+		}
 	}
-	
 }
+
