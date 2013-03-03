@@ -110,18 +110,15 @@
 	},
 	"core_value": {
 		"0": {
-			"core": "Service",
-			"title": "Top services",
+			"title": "Service",
 			"desc": "Lane Crawford has stores strategically placed in the heart of the city's prime real estate areas. In Hong Kong, Lane Crawford is located at ifc mall in Central, Pacific Place in Admiralty, Times Square in Causeway Bay, and Canton Road in Tsim Sha Tsui. In China, the store is located at Seasons Place Mall in Beijing."
 		},
 		"1": {
-			"core": "Innovation",
-			"title": "Continue to innovate",
+			"title": "Innovation",
 			"desc": "Maintaining a commitment to anticipate customers’ needs and to continue to innovate, excite and inspire them, Lane Crawford stores merge fashion, art, design and music to create a sensory experience, punctuated with curated spaces of award-winning visual merchandising and specially commissioned exhibitions and collaborations."
 		},
 		"2": {
-			"core": "Experience",
-			"title": "Personalised experience",
+			"title": "Experience",
 			"desc": "Delivering to the high standards of Asian hospitality and service, dedicated Concierge, Cosmetic Concierge and Personal Stylist teams are on hand to enhance each customer’s personalised shopping experience."
 		}
 	},

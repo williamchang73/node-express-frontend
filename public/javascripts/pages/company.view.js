@@ -187,7 +187,7 @@ companyController.setCoreValue = function(data) {
 		.find("p").text(core.desc).attr('id', 'core_value-'+i+'-desc')
 		.end();
 		$('#core').append( $eachCore );
-		$eachCoreTitle.find("span").text(core.core)
+		$eachCoreTitle.find("span").text(core.title)
 		.end();
 		$('#core_title').append( $eachCoreTitle );
     });
