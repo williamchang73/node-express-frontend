@@ -81,7 +81,7 @@
 			"title": "執行長",
 			"quote": "壓力是創業者最好的朋友",
 			"email": "",
-			"facebook": "https://www.facebook.com/eztablefan"
+			"url": "https://www.facebook.com/eztablefan"
 		},
 		"1": {
 			"name": "謝智倫",
@@ -89,7 +89,7 @@
 			"title": "科技總監",
 			"quote": "創新 服務的精神,是企業經營的 重要理念。",
 			"email": "",
-			"facebook": "https://www.facebook.com/eztablefan"
+			"url": "https://www.facebook.com/eztablefan"
 		},
 		"2": {
 			"name": "顏士棋",
@@ -97,7 +97,7 @@
 			"title": "共同創辦人",
 			"quote": "生活豈能盡如人意，讓自己快樂是你的義務與權利。",
 			"email": "",
-			"facebook": "https://www.facebook.com/eztablefan"
+			"url": "https://www.facebook.com/eztablefan"
 		},
 		"3": {
 			"name": "顏嘉楠",
@@ -105,7 +105,7 @@
 			"title": "共同創辦人",
 			"quote": "Carpe diem 即時行樂。",
 			"email": "",
-			"facebook": "https://www.facebook.com/eztablefan"
+			"url": "https://www.facebook.com/eztablefan"
 		}
 	},
 	"core_value": {
@@ -188,6 +188,6 @@
 		"email": "webservice@eztable.com.tw",
 		"address": "台北市大安區仁愛路四段85號15F-A1",
 		"phone": "02-2731-8323 ",
-		"facebook": "https://www.facebook.com/eztablefan?fref=ts"
+		"url": "https://www.facebook.com/eztablefan?fref=ts"
 	}
 }

@@ -82,7 +82,7 @@
 			"title" : "合夥人 Founding Partner", 
 			"quote" : "1999 年份的網路創業老骨頭", 
 			"email" : "", 
-			"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			"url" : "https://www.facebook.com/AppWorksVentures" 
 		},
 		"1" : {
 			"name" : "詹益鑑博士 IC Jan, PhD", 
@@ -90,7 +90,7 @@
 			"title" : "合夥人 Partner", 
 			"quote" : "具有跨領域背景及創業投資雙軌經歷", 
 			"email" : "", 
-			"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			"url" : "https://www.facebook.com/AppWorksVentures" 
 		},
 		"2" : {
 			"name" : "程九如 Nice Cheng", 
@@ -98,7 +98,7 @@
 			"title" : "合夥人 Partner", 
 			"quote" : "網路創業的世界，學歷一點都不重要。", 
 			"email" : "", 
-			"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			"url" : "https://www.facebook.com/AppWorksVentures" 
 		},
 		"3" : {
 			"name" : "楊雅朱 Phini Yang", 
@@ -106,7 +106,7 @@
 			"title" : "經理", 
 			"quote" : "負責育成計畫管理與媒體關係", 
 			"email" : "", 
-			"facebook" : "https://www.facebook.com/AppWorksVentures" 
+			"url" : "https://www.facebook.com/AppWorksVentures" 
 		}
 	},
 	"core_value" : {
@@ -189,6 +189,6 @@
 		"email" : "incubator@appworks.tw",
 		"address" : "台北市信義區基隆路一段180號5F",
 		"phone" : "02-2765-0757",
-		"facebook" : "https://www.facebook.com/AppWorksVentures"
+		"url" : "https://www.facebook.com/AppWorksVentures"
 	}
 }

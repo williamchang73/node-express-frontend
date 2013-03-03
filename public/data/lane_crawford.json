@@ -81,7 +81,7 @@
 			"title": "集團主席",
 			"quote": "自己戰勝自己才是最可貴的勝利",
 			"email": "",
-			"facebook": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
+			"url": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
 		},
 		"1": {
 			"name": "Winny Leung",
@@ -89,7 +89,7 @@
 			"title": "Human Resources Director",
 			"quote": "Don't be afraid to give up the good to go for the great.",
 			"email": "",
-			"facebook": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
+			"url": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
 		},
 		"2": {
 			"name": "William Shea",
@@ -97,7 +97,7 @@
 			"title": "Head of Marketing",
 			"quote": "The first one gets the oyster the second gets the shell.",
 			"email": "",
-			"facebook": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
+			"url": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
 		},
 		"3": {
 			"name": "Travis Lee",
@@ -105,7 +105,7 @@
 			"title": "SENIOR CORPORATE COMMUNICATIONS EXECUTIVE",
 			"quote": "You must be the change you wish to see in the world.",
 			"email": "",
-			"facebook": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
+			"url": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
 		}
 	},
 	"core_value": {
@@ -188,6 +188,6 @@
 		"email": "careers@lanecrawford.com",
 		"address": "30F, One Island South, 2 Heung Yip Road, Wong Chuk Hang, Hong Kong.",
 		"phone": "+852 2118 3093",
-		"facebook": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
+		"url": "https://www.facebook.com/pages/Lane-Crawford/145422015497422"
 	}
 }

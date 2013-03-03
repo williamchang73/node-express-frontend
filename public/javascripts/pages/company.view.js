@@ -158,7 +158,9 @@ companyController.setPeople = function(data) {
 		.end()
 		.find("#people_quote").text(person.quote).attr('id', 'people-'+i+'-quote')
 		.end()
-		.find(".facebook").attr("href", person.facebook)
+		.find("#people_link").text(person.url).attr('id', 'people-'+i+'-url')
+		.end()
+		.find(".facebook").attr("href", person.url)
 		.end();
 		$('#people_block .row').append( $eachPerson );
     });
@@ -237,6 +239,7 @@ companyController.setJobs = function(data, applyURL) {
 		$('#job_block').append( $eachJob );
     });
 	$('#job_block').parent().find('.start a').attr("href", applyURL);
+	$('#job_applyurl').find('h6').text(applyURL).attr('id', 'joy_apply_url');
 	$jobCell = null;
 }
 
@@ -257,6 +260,8 @@ companyController.setNews = function(data) {
 		.end()
 		.find("h6").text(news.source).attr('id', 'latest_news-'+i+'-source')
 		.end()
+		.find("h4").text(news.url).attr('id', 'latest_news-'+i+'-url')
+		.end()
 		.find("img").attr('src', news.pic+'/convert?w=300&h=189&fit=crop').attr('id', 'latest_news-'+i+'-pic')
 		.end()
 		.find("p").text(news.desc).attr('id', 'latest_news-'+i+'-desc')
@@ -270,13 +275,14 @@ companyController.setNews = function(data) {
 //set up contact
 companyController.setContact = function(data) {
 	$footer = $('#footer'); 
-	$footer.find('#contact_location').text(data.address);
-	$footer.find('#contact_phone').text(data.phone);
-	$footer.find('#contact_email').attr('value', data.email);
-	$footer.find('#contact_facebook').attr('href', data.facebook);
-	$footer.find('.author').find('.info p').text(data.title);
-	$footer.find('.author').find('.name p').text(data.name);
-	$footer.find('.author').find('img').attr('src', data.pic+'/convert?w=62&h=62&fit=crop');
+	$footer.find('#contact_info-address').text(data.address);
+	$footer.find('#contact_info-phone').text(data.phone);
+	$footer.find('#contact_info-email').attr('value', data.email);
+	$footer.find('#contact_url').attr('href', data.url);
+	$footer.find('#contact_info-url').text(data.url);
+	$footer.find('.author').find('.info p').text(data.title).attr('id', 'contact_info-title');
+	$footer.find('.author').find('.name p').text(data.name).attr('id', 'contact_info-name');
+	$footer.find('.author').find('img').attr('src', data.pic+'/convert?w=62&h=62&fit=crop').attr('id', 'contact_info-pic');
 }
 
 
@@ -779,7 +785,12 @@ companyController.makeEditable = function() {
 	console.log('make content editable');
 	$("p, h6, h4, .title, .date, .quote, .qty, .brand").attr('contenteditable','true');
 	$(".morejobs").attr('contenteditable','false');
-	
+	$("#contact_info-email").attr('type','text');
+	$('.facebook').hide();
+	$('.info .url').show();
+	$('.author_box h4').show();
+	$('#job_applyurl').show();
+
 	$('#feature_slider').after("<br /><br /><br /><br />");
 	$('#feature_slider').hide();
 	$('span .plus i').removeClass('icon-resize-full icon-white').addClass('icon-camera icon-white');
@@ -805,7 +816,9 @@ companyController.saveToArray = function(id, value) {
 		
 		if(beforeValue!=value){
 			console.log('need to save to array');
-			if(keys.length==2){
+			if(keys.length==1){
+				companyController.companydata[keys[0]] = value;
+			}else if(keys.length==2){
 				companyController.companydata[keys[0]][keys[1]] = value;
 			}else if(keys.length==3){
 				companyController.companydata[keys[0]][keys[1]][keys[2]] = value;

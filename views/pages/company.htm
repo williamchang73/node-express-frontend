@@ -116,6 +116,7 @@
                                 <span class="socialicons ico1"></span>
                                 <span class="socialicons_h ico1h"></span>
                             </a>
+                            <p class="url hide" id="people_link"></p>
                         </div>
                 	</div>
 				</div>
@@ -145,6 +146,7 @@
                     </div>
                     <div class="author_box">
                         <h6></h6>
+                        <h4 class="hide"></h4>
                     </div>
                 </div>
             </div>
@@ -199,10 +201,14 @@
                             <div class="features">
                                 <p></p>
                             </div>
+                            <p></p>
                             <a class="order" target="_blank" href="#">Apply</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="job_applyurl" class="start hide">
+                <h6>http://www.google.com</h6>
             </div>
             <div class="start">
                 <p class="morejobs">More Opening Positions !!</p>
@@ -220,8 +226,8 @@
                         Location
                     </h3>
                     <div class="wrapper">
-                    	<div class="quote" id="contact_location"></div>
-                    	<div class="quote" id="contact_phone"></div>
+                    	<div class="quote" id="contact_info-address"></div>
+                    	<div class="quote" id="contact_info-phone"></div>
                     </div>
                 </div>
                 <div class="span4 testimonials">
@@ -238,12 +244,12 @@
                 </div>
                 <div class="span4 contact">
                     <h3 class="footer_header">Email Us</h3>
-                    <form action="#" method="post">
+                    <form id="emailusform" action="#" method="post">
                         <input type="text" placeholder="Your name">
                         <input type="text" placeholder="Your email">
                         <textarea rows="3" placeholder="Message"></textarea>
+                        <input id="contact_info-email" type="hidden" placeholder="Your email" name="to">
                         <input type="submit" value="Send">
-                        <input id="contact_email" type="hidden" name="to" value="">
                     </form>
                 </div>
             </div>
@@ -251,10 +257,11 @@
                 <div class="span12">
                     <div class="row social">
                         <div class="span12">
-                            <a id="contact_facebook" href="#" class="facebook">
+                            <a id="contact_url" href="#" class="facebook">
                                 <span class="socialicons ico1"></span>
                                 <span class="socialicons_h ico1h"></span>
                             </a>
+                            <p class="url" id="contact_info-url">sdsds</p>
                         </div>
                     </div>
                     <div class="row copyright">

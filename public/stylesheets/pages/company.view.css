@@ -380,6 +380,13 @@
     line-height: 1.5;
     margin: 0 18px 0 0;
 }
+#in_pricing .start h6{
+    font-size: 14px;
+    display: inline-block;
+    color: #5B5B5D;
+    line-height: 1.5;
+    margin: 0 18px 0 0;
+}
 #in_pricing .start a{
     text-transform: uppercase;
     color: #fff;
@@ -678,6 +685,15 @@
 	color: #98989A;
 	font-style: 16px;
 	width: 230px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 18px;
+}
+#team .people .bio_box .info p.url{
+	color: #98989A;
+	font-style: 12px;
+	width: 230px;
+	height:10px;
 	margin-left: auto;
     margin-right: auto;
 	margin-bottom: 18px;
@@ -1002,6 +1018,14 @@
 	padding-top: 12px;
 }
 #blog .post_row .post .author_box  h6{
+	margin: 0 0 3px 0;	
+	font-size: 13px;
+	line-height: 15px;
+	font-style: italic;
+	font-weight: normal;
+	color: #B2B2B2;
+}
+#blog .post_row .post .author_box  h4{
 	margin: 0 0 3px 0;	
 	font-size: 13px;
 	line-height: 15px;
