@@ -39,7 +39,20 @@ app.configure('development', function(){
 
 
 
+//for config --------------------
+// Load configurations
+var env = process.env.NODE_ENV || 'development'
+  , config = require('./config/config')[env]
+  , mongoose = require('mongoose')
 
+// db connection
+mongoose.connect(config.db);
+
+// init models
+var models_path = __dirname + '/model';
+fs.readdirSync(models_path).forEach(function (file) {
+  require(models_path+'/'+file)
+})
 
 
 
@@ -72,6 +85,7 @@ app.post('/admin/create_company', admin.createCompany);
 //api
 app.post('/api/update_company', api_company.update);
 app.post('/api/get_company', api_company.get);
+app.post('/api/get_company_db', api_company.getFromDB);
 
 
 

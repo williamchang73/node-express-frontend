@@ -29,7 +29,8 @@ companyController.initBinding = function() {
 companyController.getCompanyData = function() {
     var that = this;
     SWSUtility.ajax({    
-        url :"/api/get_company",       
+        //url :"/api/get_company",
+        url :"/api/get_company_db",       
         data : {
         	id : global_company_name
         },

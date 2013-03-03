@@ -28,4 +28,3 @@ exports.edit = function(req, res){
 	};
 	res.render('pages/company', data);
 };
-

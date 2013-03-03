@@ -16,6 +16,17 @@ exports.get = function(req, res){
 
 
 
+exports.getFromDB = function(req, res){
+	if(req.body.id == undefined){
+		res.send(false);
+		return;
+	}
+	var ret = companyService.getDataByCompanyIDFromDB(req.body.id);
+	//console.log(ret);
+	base.responseJson(res, ret);
+};
+
+
 exports.update = function(req, res){
 	var id = req.body.id;
 	var data = req.body.data;
