@@ -60,9 +60,13 @@ app.get('/company/:id/edit', company.edit);
 
 
 //admin
+/*
 app.get('/admin/uploadphotos', admin.uploadphotos);
 app.get('/admin/uploaddata', admin.uploaddata);
 app.post('/admin/uploaddata', admin.uploaddata);
+*/
+app.get('/admin/create_company', admin.createCompany);
+app.post('/admin/create_company', admin.createCompany);
 
 
 //api

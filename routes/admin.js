@@ -28,3 +28,27 @@ exports.uploaddata = function(req, res){
 	}
 	
 };
+
+
+
+exports.createCompany = function(req, res){
+	
+	//post data
+	if(req.body.comapnyname != undefined){
+		var name = req.body.comapnyname; 
+		//save to data
+		var fs = require('fs');
+		var tpl_file = __dirname + "/../public/data/template-zh.json";
+		fs.readFile(tpl_file, function (err, data) {
+			var newPath = __dirname + "/../public/data/" + name +  '.json';
+			fs.writeFile(newPath, data, function (err) {
+				res.send('ok ! ');
+				return;
+			});
+		});
+	}else{
+		var data = {};
+		res.render('admin/create_company', data);
+	}
+	
+};
