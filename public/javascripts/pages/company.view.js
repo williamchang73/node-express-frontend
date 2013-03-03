@@ -277,7 +277,8 @@ companyController.setContact = function(data) {
 	$footer = $('#footer'); 
 	$footer.find('#contact_info-address').text(data.address);
 	$footer.find('#contact_info-phone').text(data.phone);
-	$footer.find('#contact_info-email').attr('value', data.email);
+	$footer.find('#contact_email').attr('value', data.email);
+	$footer.find('#contact_info-email').text(data.email);
 	$footer.find('#contact_url').attr('href', data.url);
 	$footer.find('#contact_info-url').text(data.url);
 	$footer.find('.author').find('.info p').text(data.title).attr('id', 'contact_info-title');
@@ -785,9 +786,9 @@ companyController.makeEditable = function() {
 	console.log('make content editable');
 	$("p, h6, h4, .title, .date, .quote, .qty, .brand").attr('contenteditable','true');
 	$(".morejobs").attr('contenteditable','false');
-	$("#contact_info-email").attr('type','text');
 	$('.facebook').hide();
 	$('.info .url').show();
+	$('#footer').find('.url').show();
 	$('.author_box h4').show();
 	$('#job_applyurl').show();
 
