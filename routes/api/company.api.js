@@ -21,30 +21,29 @@ exports.getFromDB = function(req, res){
 		res.send(false);
 		return;
 	}
-	var ret = companyService.getDataByCompanyIDFromDB(req.body.id);
-	//console.log(ret);
-	base.responseJson(res, ret);
+	var next = function(data){
+		if(data){
+			base.responseJson(res, data);	
+		}else{
+			base.responseErrorJson(res, data);
+		}
+	};
+	companyService.getDataByCompanyIDFromDB(req.body.id, next);
 };
 
 
 exports.update = function(req, res){
 	var id = req.body.id;
 	var data = req.body.data;
-	var ret = companyService.saveDataByCompanyID(id, data);
-	if(ret){
-		base.responseJson(res, true);
-	}else{
-		base.responseJson(res, false);
-	}	
+	
+	var next = function(data){
+		console.log('api : ' +data);
+		if(data){
+			base.responseJson(res, true);	
+		}else{
+			base.responseErrorJson(res, data);
+		}
+	};
+	companyService.saveDataByCompanyID(id, data, next);
 };
-
-
-
-
-
-
-
-
-
-
 

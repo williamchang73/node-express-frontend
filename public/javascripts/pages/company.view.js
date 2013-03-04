@@ -807,7 +807,7 @@ companyController.makeEditable = function() {
 
 companyController.saveToArray = function(id, value) {
 	if(id != undefined && value != "" ){
-		console.log('changing the id : ' + id + ' with value : ' + value);
+		//console.log('changing the id : ' + id + ' with value : ' + value);
 		//get key structure
 		var keys = id.split('-');
 		var beforeValue = companyController.companydata;
@@ -833,7 +833,7 @@ companyController.saveToArray = function(id, value) {
 		        url :"/api/update_company",       
 		        data : {
 		        	id : global_company_name,
-		        	data : JSON.stringify(companyController.companydata)
+		        	data : companyController.companydata
 		        },
 		        success : function(data) {
 		        	console.log(data);

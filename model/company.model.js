@@ -9,11 +9,10 @@ var mongoose = require('mongoose'), Schema = mongoose.Schema
  */
 
 var CompanySchema = new Schema({
-name		: {type : String, default : '', trim : true}, data		: { type : String, default : '', trim : true}, createdAt  : { type : Date, default :
-		Date.now
-	}, updatedAt  : { type : Date, default :
-		Date.now
-	}
+		name	   : { type : String, default : '', trim : true, required : true, unique : true}, 
+		data	   : { type : Array, default : '', trim : true}, 
+		createdAt  : { type : Date, default : Date.now }, 
+		updatedAt  : { type : Date, default : Date.now }
 });
 
 /**

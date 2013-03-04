@@ -1,6 +1,5 @@
-var fs = require('fs'), 
-	mongoose = require('mongoose'),
-	async = require('async');
+var fs = require('fs'), mongoose = require('mongoose'), async = require('async');
+;
 
 module.exports = {
 
@@ -19,39 +18,46 @@ module.exports = {
 		return false;
 	},
 
-	getDataByCompanyIDFromDB : function(id) {
+	getDataByCompanyIDFromDB : function(id, next) {
 		var data;
 		try {
 			Company = mongoose.model('Company');
 			var ret = '';
-			
+
 			Company.findByName(id, function(err, data) {
 				if ( data instanceof Object) {
-					console.log('inside the data');
-					return data.data;
+					data = JSON.stringify(data.data[0]);
+					next(data);
 				} else {
-					return false;
+					next(false);
 				}
 			});
-			console.log('finished');
 		} catch (e) {
 			console.error(e);
 			return false;
 		}
 	},
 
-	saveDataByCompanyID : function(id, data) {
+	saveDataByCompanyID : function(id, data, next) {
 		if (id && data) {
-			Company = mongoose.model('Company');
-			var companyObj = new Company();
-			companyObj.name = id;
-			companyObj.data = data;
-			companyObj.save();
-
-			//fs.writeFileSync(this.getFilePath(id), data, 'utf8');
-			return true;
+			var createOrUpdate = function(ret) {
+				Company = mongoose.model('Company');
+				if (ret) {//update
+					var conditions = { name: id }
+  						, update = { data : data }
+  						, options = {};
+					Company.update(conditions, update, options, next);
+				} else {//create
+					//new one should create
+					var companyObj = new Company();
+					companyObj.name = id;
+					companyObj.data = data;
+					companyObj.save();
+					next(true);
+				}
+			};
+			this.getDataByCompanyIDFromDB(id, createOrUpdate);
 		}
-		return false;
 	},
 
 	getFilePath : function(id) {
