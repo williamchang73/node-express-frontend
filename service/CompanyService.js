@@ -46,7 +46,15 @@ module.exports = {
 					var conditions = { name: id }
   						, update = { data : data }
   						, options = {};
-					Company.update(conditions, update, options, next);
+					Company.update(conditions, update, options, callback);
+					
+					function callback (err, numAffected) {
+						if(numAffected){
+							next(true);
+						}else{
+							next(false);
+						}
+					}
 				} else {//create
 					//new one should create
 					var companyObj = new Company();
