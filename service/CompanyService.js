@@ -17,6 +17,18 @@ module.exports = {
 		}
 		return false;
 	},
+	
+	
+	createCompany : function(id, next) {
+		var data = fs.readFileSync('./public/data/template-zh.json', 'utf8');
+		data = JSON.parse(data);
+		Company = mongoose.model('Company');
+		var companyObj = new Company();
+		companyObj.name = id;
+		companyObj.data = data;
+		companyObj.save();
+		next(true);
+	},
 
 	getDataByCompanyIDFromDB : function(id, next) {
 		var data;
@@ -67,6 +79,9 @@ module.exports = {
 			this.getDataByCompanyIDFromDB(id, createOrUpdate);
 		}
 	},
+	
+	
+	
 
 	getFilePath : function(id) {
 		return './public/data/' + id + '.json';

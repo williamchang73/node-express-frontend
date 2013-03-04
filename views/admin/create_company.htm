@@ -1,14 +1,31 @@
 <html>
 <head>
 	<script src="/3rd_party/jquery/jquery-1.9.1.min.js"></script>
+	<script>
+		var create = function(){
+			var name = $('#name').val();
+			var success = function(data){
+				alert('ok');
+				window.location.href = '/company/'+name+'/edit';
+			};
+
+			$.ajax({
+	  			type: "POST",
+	  			url: "/api/post_company",
+	  			data: { 'id': name},
+	  			success : success
+			});	
+			
+		}
+	</script>
 </head>
 <body>
 <h3> Create Company </h3>
 <hr>
 <form action="/admin/create_company" method="POST">
 	<p>Please enter company name ( lowercase / no space ): </p>
-	<input type="text" name="comapnyname" />
-	<input type="submit" />
+	<input id="name" type="text" name="comapnyname" />
+	<input id="btnCreate" value="create" type="button" onclick="javascript:create();"/>
 </form>
 </body>
 </html>

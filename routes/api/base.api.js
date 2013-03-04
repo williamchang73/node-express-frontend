@@ -26,7 +26,16 @@ module.exports = {
 		ret['error_code'] = '100';
 		ret['error_message'] = 'can not find company';
 		res.send(ret);
-	}	
+	},
+	
+	responseErrorParameterJson : function(res, data) {
+		var ret = {};
+		ret['data'] = '';
+		ret['status'] = false;
+		ret['error_code'] = '101';
+		ret['error_message'] = 'parameter is incorrect';
+		res.send(ret);
+	}
 };
 
 

@@ -2,13 +2,24 @@ var base = require('./base.api.js');
 var companyService = require('./../../service/CompanyService');
 
 
-
+exports.create = function(req, res){
+	if(req.body.id == undefined){
+		base.responseErrorParameterJson(res, false);
+	}
+	var next = function(data){
+		if(data){
+			base.responseJson(res, data);	
+		}else{
+			base.responseErrorJson(res, data);
+		}
+	};
+	companyService.createCompany(req.body.id, next);
+}
 
 
 exports.get = function(req, res){
 	if(req.body.id == undefined){
-		res.send(false);
-		return;
+		base.responseErrorParameterJson(res, false);
 	}
 	var ret = companyService.getDataByCompanyID(req.body.id);
 	base.responseJson(res, ret);
@@ -18,8 +29,7 @@ exports.get = function(req, res){
 
 exports.getFromDB = function(req, res){
 	if(req.body.id == undefined){
-		res.send(false);
-		return;
+		base.responseErrorParameterJson(res, false);
 	}
 	var next = function(data){
 		if(data){
@@ -35,6 +45,10 @@ exports.getFromDB = function(req, res){
 exports.update = function(req, res){
 	var id = req.body.id;
 	var data = req.body.data;
+	
+	if(!(id && data)){
+		base.responseErrorParameterJson(res, false);
+	}
 	
 	var next = function(data){
 		console.log('api : ' +data);

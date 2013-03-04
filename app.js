@@ -73,19 +73,15 @@ app.get('/company/:id/edit', company.edit);
 
 
 //admin
-/*
-app.get('/admin/uploadphotos', admin.uploadphotos);
-app.get('/admin/uploaddata', admin.uploaddata);
-app.post('/admin/uploaddata', admin.uploaddata);
-*/
 app.get('/admin/create_company', admin.createCompany);
-app.post('/admin/create_company', admin.createCompany);
+
 
 
 //api
 app.post('/api/update_company', api_company.update);
 app.post('/api/get_company', api_company.get);
 app.post('/api/get_company_db', api_company.getFromDB);
+app.post('/api/post_company', api_company.create);
 
 
 
