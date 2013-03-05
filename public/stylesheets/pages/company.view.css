@@ -1238,3 +1238,16 @@
     opacity: 0.8;
     filter:alpha(opacity=80);
 }
+
+
+.theme {
+	background: black;
+	width: 34px;
+    height: 34px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: inline-block;
+	margin-right: 5px;
+	cursor: pointer;
+}

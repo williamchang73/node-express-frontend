@@ -4,7 +4,17 @@
  */
 var companyController = new SWSController;
 var companydata = '';
-
+var global_theme_color = '#252528';
+//theme color
+var themecolors = {
+	'purple' :'#4A036F',
+	'red' : '#550000',
+	'brown': '#553300',
+	'black': '#252528',
+	'orange': '#A64B00',
+	'blue': '#18496A',
+	'green': '#002a00'
+};
 
 companyController.init = function() {
 	
@@ -63,23 +73,7 @@ companyController.setCompanyInfo = function(data) {
 
 //set up themes
 companyController.setGlobalThemeColor = function(color) {
-	if(color == 'purple'){
-		global_theme_color = '#4A036F';
-	}else if(color == 'red'){
-		global_theme_color = '#550000';
-	}else if(color == 'brown'){
-		global_theme_color = '#553300';
-	}else if(color == 'orange'){
-		global_theme_color = '#A64B00';
-	}else if(color == 'blue'){
-		global_theme_color = '#18496A';
-	}else if(color == 'black'){
-		global_theme_color = '#252528';
-	}else if(color == 'green'){
-		global_theme_color = '#002a00';
-	}else{
-		global_theme_color = '#252528';
-	}
+	global_theme_color = themecolors[color];
 }
 
 
@@ -291,6 +285,7 @@ companyController.setContact = function(data) {
 //set up color theme
 companyController.setColorTheme = function() {
 	$('#team').css( 'background', global_theme_color );
+	$('#footer').css( 'background-color', global_theme_color );
 	$('.circle.active').css( 'background', global_theme_color );
 	$('.dollar').css( 'color', global_theme_color );
 	$('.qty').css( 'color', global_theme_color );
@@ -779,12 +774,8 @@ companyController.handleImage = function() {
 	
 }
 
-
-
-
-//edit part
+//edit part ================================================
 companyController.makeEditable = function() {
-	console.log('make content editable');
 	$("p, h6, h4, .title, .date, .quote, .qty, .brand").attr('contenteditable','true');
 	$(".morejobs").attr('contenteditable','false');
 	$('.facebook').hide();
@@ -792,6 +783,23 @@ companyController.makeEditable = function() {
 	$('#footer').find('.url').show();
 	$('.author_box h4').show();
 	$('#job_applyurl').show();
+	$('#theme-color').show();
+
+	var $theme = $('.theme').remove().clone();
+	$.each( themecolors, function(i, color) {
+		var $eachColor = $theme.clone();
+		$eachColor.css('background', color).attr('id', 'company_info-theme-'+i);
+		$('#theme-color').append($eachColor);
+	});
+	
+	$('.theme').on('click', function(e) {
+		var id = $(this).attr('id');
+		var keys = id.split('-');
+		companyController.setGlobalThemeColor(keys[2]);
+		companyController.setColorTheme();
+		companyController.saveToArray(keys[0]+'-'+keys[1], keys[2]);
+	});
+	
 
 	$('#feature_slider').after("<br /><br /><br /><br />");
 	$('#feature_slider').hide();
@@ -807,7 +815,6 @@ companyController.makeEditable = function() {
 
 companyController.saveToArray = function(id, value) {
 	if(id != undefined && value != "" ){
-		//console.log('changing the id : ' + id + ' with value : ' + value);
 		//get key structure
 		var keys = id.split('-');
 		var beforeValue = companyController.companydata;
