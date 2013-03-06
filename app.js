@@ -80,7 +80,6 @@ app.get('/admin/create_company', admin.createCompany);
 //api
 app.post('/api/update_company', api_company.update);
 app.post('/api/get_company', api_company.get);
-app.post('/api/get_company_db', api_company.getFromDB);
 app.post('/api/post_company', api_company.create);
 
 

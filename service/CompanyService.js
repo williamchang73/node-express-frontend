@@ -3,22 +3,6 @@ var fs = require('fs'), mongoose = require('mongoose'), async = require('async')
 
 module.exports = {
 
-	/*
-	 * use id to get the json data
-	 */
-	getDataByCompanyID : function(id) {
-
-		var data;
-		try {
-			data = fs.readFileSync(this.getFilePath(id), 'utf8');
-			return data;
-		} catch (e) {
-			console.error(e);
-		}
-		return false;
-	},
-	
-	
 	createCompany : function(id, next) {
 		var data = fs.readFileSync('./public/data/template-zh.json', 'utf8');
 		data = JSON.parse(data);
@@ -30,7 +14,7 @@ module.exports = {
 		next(true);
 	},
 
-	getDataByCompanyIDFromDB : function(id, next) {
+	getDataByCompanyID : function(id, next) {
 		var data;
 		try {
 			Company = mongoose.model('Company');
@@ -76,7 +60,7 @@ module.exports = {
 					next(true);
 				}
 			};
-			this.getDataByCompanyIDFromDB(id, createOrUpdate);
+			this.getDataByCompanyID(id, createOrUpdate);
 		}
 	},
 	

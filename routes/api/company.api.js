@@ -16,18 +16,7 @@ exports.create = function(req, res){
 	companyService.createCompany(req.body.id, next);
 }
 
-
 exports.get = function(req, res){
-	if(req.body.id == undefined){
-		base.responseErrorParameterJson(res, false);
-	}
-	var ret = companyService.getDataByCompanyID(req.body.id);
-	base.responseJson(res, ret);
-};
-
-
-
-exports.getFromDB = function(req, res){
 	if(req.body.id == undefined){
 		base.responseErrorParameterJson(res, false);
 	}
@@ -38,7 +27,7 @@ exports.getFromDB = function(req, res){
 			base.responseErrorJson(res, data);
 		}
 	};
-	companyService.getDataByCompanyIDFromDB(req.body.id, next);
+	companyService.getDataByCompanyID(req.body.id, next);
 };
 
 
