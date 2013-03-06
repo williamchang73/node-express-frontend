@@ -43,7 +43,7 @@ app.configure('development', function(){
 // Load configurations
 var env = process.env.NODE_ENV || 'development'
   , config = require('./config/config')[env]
-  , mongoose = require('mongoose')
+  , mongoose = require('mongoose');
 
 // db connection
 mongoose.connect(config.db);
@@ -62,7 +62,7 @@ var routes = require('./routes')
   , index = require('./routes/index')
   , admin = require('./routes/admin')
   , company = require('./routes/company')
-  , api_company = require('./routes/api/company.api')
+  , api_company = require('./routes/api/company.api');
 
 
 app.get('/', index.index); //to do need a index file

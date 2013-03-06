@@ -1,6 +1,6 @@
 {
   "name": "aboutus",
-  "version": "0.0.2-28",
+  "version": "0.0.2-31",
   "private": true,
   "scripts": {
     "start": "app.js"
@@ -11,8 +11,8 @@
     "less-middleware": "latest",
     "log": "latest",
     "ejs-locals": "latest",
-    "mongoose" : "latest",
-    "async" : "latest"
+    "mongoose": "latest",
+    "async": "latest"
   },
   "subdomain": "williamchang.aboutus",
   "engines": {
