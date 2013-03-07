@@ -61,6 +61,7 @@ fs.readdirSync(models_path).forEach(function (file) {
 var routes = require('./routes')
   , index = require('./routes/index')
   , admin = require('./routes/admin')
+  , login = require('./routes/login')
   , company = require('./routes/company')
   , api_company = require('./routes/api/company.api');
 
@@ -69,6 +70,8 @@ app.get('/', index.index); //to do need a index file
 app.get('/company', company.index);
 app.get('/company/:id', company.index);
 app.get('/company/:id/edit', company.edit);
+
+app.get('/login', login.login);
 
 
 
