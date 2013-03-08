@@ -74,18 +74,18 @@ CompanySchema.statics = {
 	 * @param {Function} cb
 	 * @api public
 	 */
-
 	search : function(options, cb) {
 		var criteria = options.criteria || {}
-
-		this.find(criteria).populate('id', 'data').sort({
+		var display = options.display || {'_id' : 1 };
+		var perPage = options.perPage || 20;
+		var page = options.page || 0;
+		
+		this.find(criteria, display).populate().sort({
 			'createdAt' : -1
 		})// sort by date
+		.limit(perPage)
+		.skip(perPage * page)
 		.exec(cb);
-		/*
-		 .limit(options.perPage)
-		 .skip(options.perPage * options.page)
-		 .exec(cb)*/
 	}
 }
 

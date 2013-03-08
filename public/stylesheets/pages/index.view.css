@@ -95,3 +95,17 @@
 #showcase .container {
    	width: 90%;
 }
+
+
+.thumbnails .first{
+	 margin-left: 0px;
+}
+
+
+.thumbnails img{
+	 width: 400px;
+	 height: 290px;
+}
+
+
+

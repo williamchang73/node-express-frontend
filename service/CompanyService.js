@@ -65,10 +65,42 @@ module.exports = {
 	},
 	
 	
+	getCompanys : function(page, next) {
+		var data;
+		try {
+			Company = mongoose.model('Company');
+			var options = {
+				'display' : {'name' : 1, 'data.company_info' : 1, 'data.company_pic.pic' : 1}
+			};
+
+			Company.search(options, function(err, data) {
+				if ( data instanceof Object) {
+					
+					//console.log(data);
+					
+					var ret = [];
+					for (var i=0;i<data.length;i++){
+						
+						var coverpic = data[i]['data'][0]['company_pic'][0]['pic'];
+						var name =  data[i]['data'][0]['company_info']['name'];
+						var arr = { 'coverpic' : coverpic , 'name' : name , 'urlname' : data[i]['name']}
+						ret.push(arr);
+					}
+					data = JSON.stringify(ret);
+					next(data);
+				} else {
+					next(false);
+				}
+			});
+		} catch (e) {
+			console.error(e);
+			return false;
+		}
+	}
+
+	
+	
 	
 
-	getFilePath : function(id) {
-		return './public/data/' + id + '.json';
-	}
 };
 

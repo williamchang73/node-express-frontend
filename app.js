@@ -84,6 +84,7 @@ app.get('/admin/create_company', admin.createCompany);
 app.post('/api/update_company', api_company.update);
 app.post('/api/get_company', api_company.get);
 app.post('/api/post_company', api_company.create);
+app.post('/api/get_company/list', api_company.list);
 
 
 

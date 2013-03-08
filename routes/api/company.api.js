@@ -50,3 +50,17 @@ exports.update = function(req, res){
 	companyService.saveDataByCompanyID(id, data, next);
 };
 
+
+
+exports.list = function(req, res){
+	var next = function(data){
+		if(data){
+			base.responseJson(res, data);	
+		}else{
+			base.responseErrorJson(res, data);
+		}
+	};
+	var page = 1;
+	companyService.getCompanys(page, next);
+};
+
