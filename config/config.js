@@ -1,7 +1,7 @@
 
 module.exports = {
     development: {
-		db : 'mongodb://nodejitsu_williamchang:70gnad0u0900bvs8m0a12bkpcj@ds051947.mongolab.com:51947/nodejitsu_williamchang_nodejitsudb6621728064'		
+		db : 'mongodb://localhost:27017/aboutus-dev'		
     }
   	, test: {
 		db : 'mongodb://nodejitsu_williamchang:70gnad0u0900bvs8m0a12bkpcj@ds051947.mongolab.com:51947/nodejitsu_williamchang_nodejitsudb6621728064'
