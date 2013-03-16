@@ -23,6 +23,23 @@ $(function() {
 
 
 indexController.getCompanys = function() {
+	
+	var data = {
+		'Company[name]' : 'kkk222',
+		'Company[data]' : '222kkk'
+	};
+	AboutUsAPI.createCompany(data, function(res){
+		console.log(res);
+	});
+	
+	return false;
+	
+	AboutUsAPI.getCompanyList({}, function(data){
+		console.log(data);
+	});
+	return false;
+	
+	
     var that = this;
     SWSUtility.ajax({    
         url :"/api/get_company/list",
