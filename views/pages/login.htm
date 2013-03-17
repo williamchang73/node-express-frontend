@@ -2,7 +2,7 @@
 
 
 <% stylesheet('/stylesheets/pages/login.view.css') -%>
-<% script('/3rd_party/parsley/parsley-standalone.min.js') -%>	
+<% script('/3rd_party/parsley/parsley-standalone.min.js') -%>
 <% script('/javascripts/pages/login.view.js') -%>
 
 
@@ -41,12 +41,12 @@
                                     <input id="password2" type="password" placeholder="Confirm Password" data-trigger="change" data-rangelength="[6,20]">
                                     <div class="forgot">
                                         <span>Already have an account?</span>
-                                        <a href="sign-in.html">Sign in</a>
+                                        <span class="login" id="login">Login</span>
                                     </div>
                                     <input id="btnCreateUser" type="button" value="sign up">
+                                    <input id="btnLoginUser" type="button" value="Login">
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
