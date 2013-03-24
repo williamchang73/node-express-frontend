@@ -11,24 +11,22 @@ loginController.initWidget = function() {
 loginController.initBinding = function() {
 	$('#btnCreateUser').click(function() {
 		var validate = $('#createForm').parsley('validate');
-		if(validate){
+		if (validate) {
 			loginController.createUser();
 		}
 	});
-	
-	
+
 	$('#login').click(function() {
-		loginController.loginUserDisplay();		
+		loginController.loginUserDisplay();
 	});
-	
-	
+
 	$('#btnLoginUser').click(function() {
 		loginController.loginUser();
 	});
 }
 
-
 loginController.loginUser = function() {
+	console.log('login user');
 	var email = $('#email').val();
 	var pass = $('#password').val();
 	var data = {
@@ -36,16 +34,32 @@ loginController.loginUser = function() {
 		'password' : pass
 	};
 	AboutUsAPI.loginUser(data, function(res) {
-		var expired = 30;
-		if(res && res.token){
-			$.cookie("token", res.token, { expires: expired });
-			$.cookie("user", res.user, { expires: expired });
-			console.log('save into cookies');
+		if (res.status == 200) {
+			data = res.data;
+			if (data && data.token) {
+				var expired = 30;
+				$.cookie("token", data.token, {
+					expires : expired
+				});
+				$.cookie("user", JSON.stringify(data.user), {
+					expires : expired
+				});
+				AboutUsAPI.getCompaniesByUser({'token':data.token}, function(res2){
+					if(res2.status == 200 && res2.data.length > 0){
+						var company = res2.data[0].name;
+						if(company.length > 0){
+							window.location.href = '/company/'+company;
+						}						
+					}
+				});
+			}else{
+				console.error('login failed');
+			}
+		}else{
+			console.error(res);
 		}
 	});
 }
-
-
 
 loginController.loginUserDisplay = function() {
 	$('#urlname').hide();
@@ -53,7 +67,7 @@ loginController.loginUserDisplay = function() {
 	$('.forgot').hide();
 	$('#btnCreateUser').hide();
 	$('#btnLoginUser').show();
-	
+
 }
 
 loginController.createUser = function() {
@@ -68,20 +82,28 @@ loginController.createUser = function() {
 			'User[email]' : email,
 			'User[password]' : pass
 		};
-		AboutUsAPI.createUser(data, function(res) { //first create user
+		AboutUsAPI.createUser(data, function(res) {//first create user
 			if (res) {
+				
+				/*
 				var userid = res.data.id;
 				var data = {
 					'Company[name]' : urlname,
-					'Company[data]' : '222kkk',
+					'Company[data]' : '',
 					'Company[userid]' : userid
 				};
-				AboutUsAPI.createCompany(data, function(res) { //create company and will redirect to the company
-					//auto login
-					loginController.loginUser();
-				});
-			} else {
+				*/
+				loginController.loginUser();
+				/*
+				console.log('token : ' + $.cookie("token"));
+				*/
+				/*
+				 AboutUsAPI.createCompany(data, function(res) { //create company and will redirect to the company
+				 //auto login
 
+				 });*/
+			} else {
+				console.error('login failed');
 			}
 		});
 	}

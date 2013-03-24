@@ -16,7 +16,6 @@ $(function() {
     
     if(token && user){
     	user = $.parseJSON(user);
-    	console.log(user);
     	$('#nav_login').hide();
     	$('#nav_user').find('a').text(user.email + ' / logout');
     	//$('#nav_company').find('a').text(user.urlname + ' / logout');
