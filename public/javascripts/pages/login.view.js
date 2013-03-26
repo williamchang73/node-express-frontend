@@ -44,12 +44,18 @@ loginController.loginUser = function() {
 				$.cookie("user", JSON.stringify(data.user), {
 					expires : expired
 				});
-				AboutUsAPI.getCompaniesByUser({'token':data.token}, function(res2){
+				
+				//after login, will auto redirect...
+				AboutUsAPI.getCompaniesByUser({}, data.token, function(res2){
 					if(res2.status == 200 && res2.data.length > 0){
 						var company = res2.data[0].name;
 						if(company.length > 0){
 							window.location.href = '/company/'+company;
 						}						
+					}else if($('#urlname').val()){ //need to create company, only at the first time
+						AboutUsAPI.createCompany({'Company[name]' : $('#urlname').val()}, data.token, function(res) {
+						 	console.log(res);
+						});
 					}
 				});
 			}else{
