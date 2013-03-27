@@ -17,12 +17,17 @@ var themecolors = {
 };
 
 companyController.init = function() {
-	
 }
 
 companyController.initWidget = function() {
 	companyController.getCompanyData();
 	if(global_mode == 'edit'){
+		//check permission
+		var company =  $.parseJSON($.cookie("company"));
+		if(company.name != global_company_name){
+			window.location.href = '/company/'+company.name+'/edit';
+		}
+		
 		//filepicker
 		filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
 		companyController.makeEditable(); 		
@@ -38,14 +43,16 @@ companyController.initBinding = function() {
 
 companyController.getCompanyData = function() {
     var that = this;
-    SWSUtility.ajax({    
-        url :"/api/get_company",
-        data : {
-        	id : global_company_name
-        },
-        async : 'false',
-        success : function(data) {
-        	that.companydata = data;
+    var company =  $.parseJSON($.cookie("company"));
+    var key = "";
+    if(company != null){
+    	key = company.id;
+    }
+    
+    AboutUsAPI.getCompanyInfo({"name":global_company_name, "key": key}, function(res) {
+    	if(res.status==200){
+    		data = res.data.data;
+    		that.companydata = data;
 			companyController.setCompanyInfo(data.company_info);
 			companyController.setWorkingSpaces(data.company_pic);
 			companyController.setEvent(data.events);
@@ -55,11 +62,12 @@ companyController.getCompanyData = function() {
 			companyController.setNews(data.latest_news);
 			companyController.setContact(data.contact_info);
 			companyController.setColorTheme();
-        },                 
-        error : function(data) {
-            console.error(data.error_message);
-        }
-	});
+    	}else{
+    		console.error(res.status_msg);
+    		window.location.href="/";
+    	}
+    	
+    });
 };
 
 //set up company information
@@ -835,20 +843,19 @@ companyController.saveToArray = function(id, value) {
 			}
 			//save back to server
 			
-			SWSUtility.ajax({    
-		        url :"/api/update_company",       
-		        data : {
-		        	id : global_company_name,
-		        	data : companyController.companydata
-		        },
-		        success : function(data) {
-		        	console.log(data);
-		        },                 
-		        error : function(data) {
-		            console.error(data.error_message);
-		        }
-			});
+			var token = $.cookie("token");
+			var company =  $.parseJSON($.cookie("company"));
 			
+			if(token.length>0 && company.id.length>0){
+				console.log(token);
+				console.log(company.id);
+		       	AboutUsAPI.updateCompany({"key":company.id, "Company[data]" : companyController.companydata}, token, function(res) {
+		       		console.log(res);
+		       	});
+			}else{
+				console.error('need to login');
+				window.location.href = '/login';
+			}
 			
 		}
 	}

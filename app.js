@@ -43,27 +43,13 @@ app.configure('development', function(){
 // Load configurations
 var env = process.env.NODE_ENV || 'development'
   , config = require('./config/config')[env]
-  , mongoose = require('mongoose');
-
-// db connection
-mongoose.connect(config.db);
-
-// init models
-var models_path = __dirname + '/model';
-fs.readdirSync(models_path).forEach(function (file) {
-  require(models_path+'/'+file)
-})
-
-
-
 
 //for routing --------------------
 var routes = require('./routes')
   , index = require('./routes/index')
   , admin = require('./routes/admin')
   , login = require('./routes/login')
-  , company = require('./routes/company')
-  , api_company = require('./routes/api/company.api');
+  , company = require('./routes/company');
 
 
 app.get('/', index.index); //to do need a index file
@@ -78,15 +64,6 @@ app.get('/logout', login.logout);
 
 //admin
 app.get('/admin/create_company', admin.createCompany);
-
-
-
-//api
-app.post('/api/update_company', api_company.update);
-app.post('/api/get_company', api_company.get);
-app.post('/api/post_company', api_company.create);
-app.post('/api/get_company/list', api_company.list);
-
 
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -13,12 +13,13 @@ var uvOptions = {};
 $(function() {
     var token = $.cookie("token");
     var user = $.cookie("user");
-    var urlname = $.cookie("urlname");
-    if(token && user && user !=  "null"){
+    var company = $.cookie("company");
+    if(token && user && company && user !=  "null"){
     	user = $.parseJSON(user);
+    	company = $.parseJSON(company);
     	$('#nav_login').hide();
     	$('#user_email').text(user.email).append('<b class="caret"></b>');
-    	$('#nav_company').find('a').text(urlname).attr('href', '/company/'+urlname+'/edit');
+    	$('#nav_company').find('a').text(company.name).attr('href', '/company/'+company.name+'/edit');
     }else{
     	$('#nav_user').hide();
     }
