@@ -11,6 +11,6 @@ SWSController.prototype.initialize = function() {
 		this.exec();
 	}
 	catch(x) {
-		//console.error(x.message);
+		console.error(x.message);
 	}
 };

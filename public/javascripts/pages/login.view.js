@@ -12,7 +12,7 @@ loginController.initWidget = function() {
 		$.cookie("user", null);
 		$.cookie("token", null);
 		$.cookie("company", null);
-		window.location.href = '/';
+		window.location.href = '/login';
 	}
 }
 
@@ -57,7 +57,6 @@ loginController.loginUser = function() {
 				
 				//after login, will auto redirect...
 				AboutUsAPI.getCompaniesByUser({}, data.token, function(res2){
-					console.log('res2', res2);
 					if(res2.status == 200 && res2.data.length > 0){ // if exist can not create again
 						$.cookie("company", JSON.stringify( {'name' : res2.data[0].name, 'id' : res2.data[0].id } ), {expires : expired});
 						window.location.href = '/company/'+res2.data[0].name+'/edit';
@@ -74,6 +73,7 @@ loginController.loginUser = function() {
 				console.error('login failed');
 			}
 		}else{
+			console.log('api login failed');
 			console.error(res);
 		}
 	});
@@ -101,7 +101,7 @@ loginController.createUser = function() {
 			'User[password]' : pass
 		};
 		AboutUsAPI.createUser(data, function(res) {//first create user
-			if (res) {
+			if (res.status == 200) {
 				loginController.loginUser();
 			} else {
 				console.error('login failed');
