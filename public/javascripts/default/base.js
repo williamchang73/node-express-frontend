@@ -13,12 +13,12 @@ var uvOptions = {};
 $(function() {
     var token = $.cookie("token");
     var user = $.cookie("user");
-    
-    if(token && user){
+    var urlname = $.cookie("urlname");
+    if(token && user && user !=  "null"){
     	user = $.parseJSON(user);
     	$('#nav_login').hide();
-    	$('#nav_user').find('a').text(user.email + ' / logout');
-    	//$('#nav_company').find('a').text(user.urlname + ' / logout');
+    	$('#user_email').text(user.email).append('<b class="caret"></b>');
+    	$('#nav_company').find('a').text(urlname).attr('href', '/company/'+urlname+'/edit');
     }else{
     	$('#nav_user').hide();
     }

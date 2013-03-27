@@ -72,6 +72,7 @@ app.get('/company/:id', company.index);
 app.get('/company/:id/edit', company.edit);
 
 app.get('/login', login.login);
+app.get('/logout', login.logout);
 
 
 

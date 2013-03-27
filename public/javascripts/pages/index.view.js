@@ -24,6 +24,8 @@ $(function() {
 
 indexController.getCompanys = function() {
 	
+	
+	/*
 	var data = {
 		'Company[name]' : 'kkk222',
 		'Company[data]' : '222kkk'
@@ -38,9 +40,10 @@ indexController.getCompanys = function() {
 		console.log(data);
 	});
 	return false;
-	
+	*/
 	
     var that = this;
+    /*
     SWSUtility.ajax({    
         url :"/api/get_company/list",
         data : {},
@@ -64,4 +67,5 @@ indexController.getCompanys = function() {
             console.error(data.error_message);
         }
 	});
+	*/
 };

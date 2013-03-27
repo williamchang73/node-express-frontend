@@ -6,6 +6,15 @@ var loginController = new SWSController;
 
 loginController.initWidget = function() {
 	$('#btnLoginUser').hide();
+	
+	//check if need logout
+	if(global_mode == 'logout'){
+		$.cookie("user", null);
+		$.cookie("token", null);
+		$.cookie("urlname", null);
+		$('#nav_login').show();
+		$('#nav_user').hide();
+	}
 }
 
 loginController.initBinding = function() {
@@ -25,6 +34,9 @@ loginController.initBinding = function() {
 	});
 }
 
+/**
+ * we need to login, and get all the companies belong this user
+ */
 loginController.loginUser = function() {
 	console.log('login user');
 	var email = $('#email').val();
@@ -34,6 +46,7 @@ loginController.loginUser = function() {
 		'password' : pass
 	};
 	AboutUsAPI.loginUser(data, function(res) {
+		console.log('login user res', res);
 		if (res.status == 200) {
 			data = res.data;
 			if (data && data.token) {
@@ -47,14 +60,18 @@ loginController.loginUser = function() {
 				
 				//after login, will auto redirect...
 				AboutUsAPI.getCompaniesByUser({}, data.token, function(res2){
-					if(res2.status == 200 && res2.data.length > 0){
-						var company = res2.data[0].name;
-						if(company.length > 0){
-							window.location.href = '/company/'+company;
-						}						
+					console.log('get companies by user : res2', res2);
+					if(res2.status == 200 && res2.data.length > 0){ // if exist can not create again
+						$.cookie("urlname", res2.data[0].name, {expires : expired});
+						window.location.href = '/company/'+res2.data[0].name+'/edit';
 					}else if($('#urlname').val()){ //need to create company, only at the first time
-						AboutUsAPI.createCompany({'Company[name]' : $('#urlname').val()}, data.token, function(res) {
-						 	console.log(res);
+						console.log('will also create a compnay');
+						AboutUsAPI.createCompany({'Company[name]' : $('#urlname').val()}, data.token, function(res3) {
+							console.log('create company res3 : ', res3);
+							if(res3.status == 200){
+								$.cookie("urlname", res3.data.name, {expires : expired});
+								window.location.href = '/company/'+res3.data.name+'/edit';	
+							}
 						});
 					}
 				});
@@ -89,25 +106,9 @@ loginController.createUser = function() {
 			'User[password]' : pass
 		};
 		AboutUsAPI.createUser(data, function(res) {//first create user
+			console.log('create user res', res);
 			if (res) {
-				
-				/*
-				var userid = res.data.id;
-				var data = {
-					'Company[name]' : urlname,
-					'Company[data]' : '',
-					'Company[userid]' : userid
-				};
-				*/
 				loginController.loginUser();
-				/*
-				console.log('token : ' + $.cookie("token"));
-				*/
-				/*
-				 AboutUsAPI.createCompany(data, function(res) { //create company and will redirect to the company
-				 //auto login
-
-				 });*/
 			} else {
 				console.error('login failed');
 			}
@@ -115,6 +116,8 @@ loginController.createUser = function() {
 	}
 
 }
+
+
 $(function() {
 	loginController.initialize();
 });
