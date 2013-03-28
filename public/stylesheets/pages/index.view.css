@@ -134,3 +134,13 @@
 
 
 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    #myCarousel{
+    	display : none;
+    }
+    .carousel-caption{
+ 		display : none;   	
+    }
+    
+}
