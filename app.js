@@ -45,7 +45,8 @@ app.configure(function(){
   clientjs.addFile("app", __dirname + "/public/3rd_party/cookies/jquery.cookie.js");
   clientjs.addFile("app", __dirname + "/public/javascripts/default/theme.js");
   clientjs.addFile("app", __dirname + "/public/javascripts/lib/util/swsController.js");
-  
+
+  clientjs.addFile("base", __dirname + "/public/javascripts/default/base.js");
 });
 
 app.configure('development', function(){

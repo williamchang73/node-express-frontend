@@ -3,10 +3,12 @@
  * GET home page.
  */
 exports.index = function(req, res){
-  var js = req.app.get('clientjs');
+  var clientjs = req.app.get('clientjs');
+  
+  clientjs.addFile("page_index", __dirname + "/../public/javascripts/pages/index.view.js");
   
   var data = { 
-		"global_js" : js.renderTags("app")
+		"clientjs" : clientjs.renderTags("app", "page_index", "base")
 	};
 	
   res.render('pages/index', data);
