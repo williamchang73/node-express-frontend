@@ -16,13 +16,13 @@ var app = express();
 //var app = require('express');
 var srv = http.createServer(app);
 var clientjs = piler.createJSManager();
-//var clientcss = piler.createCSSManager();
+var clientcss = piler.createCSSManager();
 
 
 app.configure(function(){
 	
   clientjs.bind(app, srv);
-  //clientcss.bind(app, srv);	
+  clientcss.bind(app, srv);	
 
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -40,7 +40,15 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
   
   app.set('clientjs', clientjs);
+  app.set('clientcss', clientcss);
+
+  
   /* glocal js and css */
+  clientcss.addFile("app", __dirname + "/public/3rd_party/bootstrap/css/bootstrap.css");
+  clientcss.addFile("app", __dirname + "/public/stylesheets/default/base.css");
+  clientcss.addFile("app", __dirname + "/public/stylesheets/default/theme.css");
+  clientcss.addFile("app", __dirname + "/public/3rd_party/googlefont/font.css");
+ 
   clientjs.addFile("app", __dirname + "/public/3rd_party/bootstrap/js/bootstrap.min.js");
   clientjs.addFile("app", __dirname + "/public/3rd_party/cookies/jquery.cookie.js");
   clientjs.addFile("app", __dirname + "/public/javascripts/default/theme.js");
