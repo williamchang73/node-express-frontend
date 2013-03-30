@@ -11,7 +11,8 @@
     "less-middleware": "latest",
     "log": "latest",
     "ejs-locals": "latest",
-    "async": "latest"
+    "async": "latest",
+    "piler-compat": "latest"
   },
   "subdomain": "williamchang.aboutus",
   "engines": {
