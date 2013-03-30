@@ -28,7 +28,7 @@ companyController.initWidget = function() {
 			if (company.name != global_company_name) {
 				window.location.href = '/company/' + company.name + '/edit';
 			}
-		}else{
+		} else {
 			window.location.href = '/';
 		}
 
@@ -660,8 +660,12 @@ companyController.handleImage = function() {
 
 	if (global_mode == 'edit') {
 		//for uploading the photos
-		$('.uploadpic img, .headpic, .newspic').on('click', function(e) {
+		$('.uploadpic img, .headpic, .newspic, .circle').on('click', function(e) {
 			var $img = $(this);
+			
+			if($(this).attr('class') == "circle"){
+				$img = $(this).parent().find('img');
+			}
 
 			filepicker.pick({
 				mimetypes : ['image/*', 'text/plain'],
