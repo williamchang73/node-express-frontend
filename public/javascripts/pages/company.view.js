@@ -660,7 +660,7 @@ companyController.handleImage = function() {
 
 	if (global_mode == 'edit') {
 		//for uploading the photos
-		$('.uploadpic img, .headpic, .newspic, .circle').on('click', function(e) {
+		$('.uploadpic img, .headpic, .newspic, .uploadpic .circle').on('click', function(e) {
 			var $img = $(this);
 			
 			if($(this).attr('class') == "circle"){
