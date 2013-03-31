@@ -15,6 +15,9 @@ $(function () {
 
     staticHeader.initialize();
     portfolioItem.initialize();
+    
+	$('#nav_login, #nav_company, #nav_index').find('a').removeClass('active');
+
 });
 
 var portfolioItem = {

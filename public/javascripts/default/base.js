@@ -11,6 +11,8 @@ var uvOptions = {};
 
 //check login
 $(function() {
+	
+	
     var token = $.cookie("token");
     var user = $.cookie("user");
     var company = $.cookie("company");

@@ -14,6 +14,8 @@ loginController.initWidget = function() {
 		$.cookie("company", null);
 		window.location.href = '/login';
 	}
+	
+	$('#nav_login').find('a').addClass('active');
 }
 
 loginController.initBinding = function() {

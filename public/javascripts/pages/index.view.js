@@ -13,6 +13,8 @@ indexController.initBinding = function() {
 
 indexController.initWidget = function() {
 	indexController.getCompanies();
+	
+	$('#nav_index').find('a').addClass('active');
 }
 $(function() {
 	indexController.initialize();

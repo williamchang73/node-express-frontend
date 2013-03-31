@@ -36,7 +36,7 @@ companyController.initWidget = function() {
 		filepicker.setKey('AAhvacqKRFapIgzqz3Tmaz');
 		companyController.makeEditable();
 	}
-
+	$('#nav_company').find('a').addClass('active');
 }
 
 companyController.initBinding = function() {
