@@ -5,6 +5,8 @@
 	margin-top: 100px;
 }
 #sign_up2 .section_header h3{
+	font-style: normal;
+	border-bottom: none;
 	margin: 0;
 }
 #sign_up2 .section_header h3 span{
@@ -49,6 +51,10 @@
 }
 #sign_up2 .left_box .perk_box .perk p strong{
 	color: #333;
+}
+#sign_up2 .left_box h3{
+	font-size: 20px;
+	margin-bottom: 45px;
 }
 #sign_up2 a.btn_sign{
 	text-transform: uppercase;
@@ -213,6 +219,7 @@
 	text-decoration: underline;
 	cursor : pointer;
 }
+
 
 
 /* Responsive
