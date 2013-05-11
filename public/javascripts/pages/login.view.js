@@ -84,6 +84,7 @@ loginController.loginUser = function() {
 loginController.loginUserDisplay = function() {
 	$('#urlname').hide();
 	$('#password2').hide();
+	$('#label_urlname').hide();
 	$('.forgot').hide();
 	$('#btnCreateUser').hide();
 	$('#btnLoginUser').show();
