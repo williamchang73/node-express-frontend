@@ -216,6 +216,7 @@ companyController.setNews = function(data) {
 //set up contact
 companyController.setContact = function(data) {
 	$footer = $('#footer');
+	$footer.find('#contact_info-sn').text(data.sn);
 	$footer.find('#contact_info-address').text(data.address);
 	$footer.find('#contact_info-phone').text(data.phone);
 	$footer.find('#contact_email').attr('value', data.email);
