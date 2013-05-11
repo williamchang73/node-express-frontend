@@ -781,6 +781,7 @@ companyController.saveToArray = function(id, value) {
 				});
 			} else {
 				console.error('need to login');
+				alert("need to login first !");
 				window.location.href = '/login';
 			}
 
