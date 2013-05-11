@@ -132,6 +132,10 @@
 	 height: 290px;
 }
 
+.thumbnails .span4{
+	height: 360px;
+}
+
 
 
 /* Landscape phones and down */
