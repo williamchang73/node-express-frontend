@@ -76,6 +76,7 @@ loginController.loginUser = function() {
 			}
 		}else{
 			console.log('api login failed');
+			alert('login failed, please try again later!');
 			console.error(res);
 		}
 	});
